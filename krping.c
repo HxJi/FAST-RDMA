@@ -1027,6 +1027,8 @@ static void krping_test_client(struct krping_cb *cb)
 	int ping, start, cc, i, ret;
 	const struct ib_send_wr *bad_wr;
 	unsigned char c;
+    
+    uint64_t t1, t2, t3, t4;
 
 	start = 65;
 	for (ping = 0; !cb->count || ping < cb->count; ping++) {
@@ -1047,18 +1049,21 @@ static void krping_test_client(struct krping_cb *cb)
 
 		printk(KERN_INFO PFX "ping data (64B max): |%.64s|\n",
 				cb->rdma_buf);
-
+        
+        t1 = rdtsc();
 		krping_format_send(cb, cb->rdma_dma_addr);
 		if (cb->state == ERROR) {
 			printk(KERN_ERR PFX "krping_format_send failed\n");
 			break;
 		}
+        t2 = rdtsc();
 
 		ret = ib_post_send(cb->qp, &cb->sq_wr, &bad_wr);
 		if (ret) {
 			printk(KERN_ERR PFX "post send error %d\n", ret);
 			break;
 		}
+        t3 = rdtsc();
 		
 		/* Wait for the server to say the RDMA Write is complete. */
 		wait_event_interruptible(cb->sem, 
@@ -1069,9 +1074,15 @@ static void krping_test_client(struct krping_cb *cb)
 			       cb->state);
 			break;
 		}
+        t4 = rdtsc();
 
 		printk(KERN_INFO PFX "pong data (64B max): |%.64s|\n",
 			cb->rdma_buf);
+
+		printk(KERN_INFO PFX "formant_send: %llu\n", t2 - t1);
+		printk(KERN_INFO PFX "post_send   : %llu\n", t3 - t2);
+		printk(KERN_INFO PFX "wait_interr : %llu\n", t4 - t3);
+
 			
 #ifdef SLOW_KRPING
 		wait_event_interruptible_timeout(cb->sem, cb->state == ERROR, HZ);
