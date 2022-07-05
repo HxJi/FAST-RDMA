@@ -138,6 +138,8 @@ static LIST_HEAD(krping_cbs);
 
 static struct proc_dir_entry *krping_proc;
 
+uint64_t seg1_sum, seg2_sum, seg3_sum, run_cnt;
+
 /*
  * Invoke like this, one on each side, using the server's address on
  * the RDMA device (iw%d):
@@ -1075,8 +1077,7 @@ static void krping_test_client(struct krping_cb *cb)
 			start = 65;
 		cb->rdma_buf[cb->size - 1] = 0;
 
-		printk(KERN_INFO PFX "ping data (64B max): |%.64s|\n",
-				cb->rdma_buf);
+		//printk(KERN_INFO PFX "ping data (64B max): |%.64s|\n", cb->rdma_buf);
         
         t1 = rdtsc();
 		krping_format_send(cb, cb->rdma_dma_addr);
@@ -1092,7 +1093,7 @@ static void krping_test_client(struct krping_cb *cb)
 			break;
 		}
         t3 = rdtsc();
-		
+    
 		/* Wait for the server to say the RDMA Write is complete. */
 		wait_event_interruptible(cb->sem, 
 					 cb->state >= RDMA_WRITE_COMPLETE);
@@ -1104,12 +1105,18 @@ static void krping_test_client(struct krping_cb *cb)
 		}
         t4 = rdtsc();
 
-		printk(KERN_INFO PFX "pong data (64B max): |%.64s|\n",
-			cb->rdma_buf);
-
-		printk(KERN_INFO PFX "formant_send: %llu\n", t2 - t1);
-		printk(KERN_INFO PFX "post_send   : %llu\n", t3 - t2);
-		printk(KERN_INFO PFX "wait_interr : %llu\n", t4 - t3);
+		//printk(KERN_INFO PFX "pong data (64B max): |%.64s|\n", cb->rdma_buf);
+           
+        seg1_sum += t2 - t1;
+        seg2_sum += t3 - t2;
+        seg3_sum += t4 - t3;
+        run_cnt++;
+        if (run_cnt % 50 == 0) {
+            printk(KERN_INFO PFX "iter: %llu ==================\n", run_cnt);
+            printk(KERN_INFO PFX "formant_send: %llu\n", seg1_sum / run_cnt);
+            printk(KERN_INFO PFX "post_send   : %llu\n", seg2_sum / run_cnt);
+            printk(KERN_INFO PFX "wait_interr : %llu\n", seg3_sum / run_cnt);
+        }
 
 			
 #ifdef SLOW_KRPING
@@ -1503,6 +1510,10 @@ static int __init krping_init(void)
 		printk(KERN_ERR PFX "cannot create /proc/krping\n");
 		return -ENOMEM;
 	}
+    seg1_sum = 0;
+    seg2_sum = 0;
+    seg3_sum = 0;
+    run_cnt = 0;
 	return 0;
 }
 
