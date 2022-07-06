@@ -84,6 +84,7 @@ static const struct krping_option krping_opts[] = {
  	{"poll", OPT_NOPARAM, 'P'},
  	{"local_dma_lkey", OPT_NOPARAM, 'Z'},
  	{"read_inv", OPT_NOPARAM, 'R'},
+    {"serv_poll", OPT_NOPARAM, 'E'},
 	{NULL, 0, 0}
 };
 
@@ -223,7 +224,7 @@ struct krping_cb {
 
 	struct ib_rdma_wr rdma_sq_wr;	/* rdma work request record */
 	struct ib_sge rdma_sgl;		/* rdma single SGE */
-	char *rdma_buf;			/* used as rdma sink */
+	volatile char *rdma_buf;			/* used as rdma sink */
 	u64  rdma_dma_addr;
 	DEFINE_DMA_UNMAP_ADDR(rdma_mapping);
 	struct ib_mr *rdma_mr;
@@ -259,6 +260,7 @@ struct krping_cb {
 	int local_dma_lkey;		/* use 0 for lkey */
 	int frtest;			/* reg test */
 	int tos;			/* type of service */
+    int serv_poll;      /* option for server (SmartNIC) poll requests */
 
 	/* CM stuff */
 	struct rdma_cm_id *cm_id;	/* connection on client side,*/
@@ -373,13 +375,23 @@ static int client_recv(struct krping_cb *cb, struct ib_wc *wc)
 		return -1;
 	}
 
+	cb->remote_rkey = ntohl(cb->recv_buf.rkey);
+	cb->remote_addr = ntohll(cb->recv_buf.buf);
+	cb->remote_len  = ntohl(cb->recv_buf.size);
+
+    if (cb->state <= CONNECTED) {
+		cb->state = RDMA_WRITE_ADV;
+    } else {
+        cb->state = RDMA_WRITE_COMPLETE;
+    }
+
 	// if (cb->state == RDMA_READ_ADV)
 	// 	cb->state = RDMA_WRITE_ADV;
 	// else
 	// 	cb->state = RDMA_WRITE_COMPLETE;
 
 	// Be careful about the state changes
-	cb->state = RDMA_WRITE_COMPLETE;
+	// cb->state = RDMA_WRITE_COMPLETE;
 	DEBUG_LOG("Client Received rkey %x addr %llx len %d from peer, State changed to %d\n",
 		  cb->remote_rkey, (unsigned long long)cb->remote_addr, 
 		  cb->remote_len, cb->state);
@@ -793,14 +805,33 @@ static void krping_format_send(struct krping_cb *cb, u64 buf)
 	 * advertising the rdma buffer.  Server side
 	 * sends have no data.
 	 */
-	if (!cb->server || cb->wlat || cb->rlat || cb->bw) {
-		rkey = krping_rdma_rkey(cb, buf, !cb->server_invalidate);
-		info->buf = htonll(buf);
-		info->rkey = htonl(rkey);
-		info->size = htonl(cb->size);
-		DEBUG_LOG("RDMA addr %llx rkey %x len %d\n",
-			  (unsigned long long)buf, rkey, cb->size);
-	}
+	//if (!cb->server || cb->wlat || cb->rlat || cb->bw) {
+	//}
+    rkey = krping_rdma_rkey(cb, buf, !cb->server_invalidate);
+    info->buf = htonll(buf);
+    info->rkey = htonl(rkey);
+    info->size = htonl(cb->size);
+    DEBUG_LOG("RDMA addr %llx rkey %x len %d\n",
+          (unsigned long long)buf, rkey, cb->size);
+}
+
+static void krping_test_server_serv_poll(struct krping_cb *cb) {
+	struct ib_send_wr inv;
+	const struct ib_send_wr *bad_wr;
+	int ret;
+    
+    wait_event_interruptible(cb->sem, cb->state >= RDMA_READ_ADV);
+    if (cb->state != RDMA_READ_ADV) {
+        printk(KERN_ERR PFX "wait for RDMA_READ_ADV state %d\n",
+            cb->state);
+    }
+
+    DEBUG_LOG("[client serv_poll] hand shake received\n");
+    
+    
+    /*
+    while (1) {
+    }*/
 }
 
 static void krping_test_server(struct krping_cb *cb)
@@ -1042,7 +1073,11 @@ static void krping_run_server(struct krping_cb *cb)
 		goto err2;
 	}
 
-	krping_test_server(cb);
+    if (cb->serv_poll) {
+        krping_test_server_serv_poll(cb);
+    } else {
+        krping_test_server(cb);
+    }
 	rdma_disconnect(cb->child_cm_id);
 err2:
 	krping_free_buffers(cb);
@@ -1050,6 +1085,42 @@ err1:
 	krping_free_qp(cb);
 err0:
 	rdma_destroy_id(cb->child_cm_id);
+}
+static void krping_test_client_serv_poll(struct krping_cb *cb) {
+	int ping, start, cc, i, ret;
+	const struct ib_send_wr *bad_wr;
+	unsigned char c;
+	start = 65;
+    
+    // host --> SmartNIC
+    krping_format_send(cb, cb->rdma_dma_addr);
+
+    // host <-- SmartNIC
+    wait_event_interruptible(cb->sem, cb->state >= RDMA_WRITE_ADV);
+    if (cb->state != RDMA_WRITE_ADV) {
+        printk(KERN_ERR PFX 
+               "wait for RDMA_WRITE_ADV state %d\n",
+               cb->state);
+        return;
+    }
+    DEBUG_LOG("[server serv_poll] hand shake received\n");
+    return;
+
+
+	for (ping = 0; !cb->count || ping < cb->count; ping++) {
+		/* Put some ascii text in the buffer. */
+		cc = sprintf(cb->rdma_buf, "rdma-ping-%d: ", ping);
+		for (i = cc, c = start; i < cb->size; i++) {
+			cb->rdma_buf[i] = c;
+			c++;
+			if (c > 122)
+				c = 65;
+		}
+		start++;
+		if (start > 122)
+			start = 65;
+		cb->rdma_buf[cb->size - 1] = 0;
+    }
 }
 
 static void krping_test_client(struct krping_cb *cb)
@@ -1060,7 +1131,11 @@ static void krping_test_client(struct krping_cb *cb)
     
     uint64_t t1, t2, t3, t4;
 
+    printk("pre-run client state: %d\n", cb->state);
 	start = 65;
+
+    krping_format_send(cb, cb->rdma_dma_addr);
+
 	for (ping = 0; !cb->count || ping < cb->count; ping++) {
 		cb->state = RDMA_READ_ADV;
 
@@ -1080,7 +1155,6 @@ static void krping_test_client(struct krping_cb *cb)
 		//printk(KERN_INFO PFX "ping data (64B max): |%.64s|\n", cb->rdma_buf);
         
         t1 = rdtsc();
-		krping_format_send(cb, cb->rdma_dma_addr);
 		if (cb->state == ERROR) {
 			printk(KERN_ERR PFX "krping_format_send failed\n");
 			break;
@@ -1265,7 +1339,11 @@ static void krping_run_client(struct krping_cb *cb)
 		goto err2;
 	}
 
-	krping_test_client(cb);
+    if (cb->serv_poll) {
+        krping_test_client_serv_poll(cb);
+    } else {
+        krping_test_client(cb);
+    }
 	rdma_disconnect(cb->cm_id);
 err2:
 	krping_free_buffers(cb);
@@ -1383,6 +1461,10 @@ int krping_doit(char *cmd)
 			cb->read_inv = 1;
 			DEBUG_LOG("using read-with-inv\n");
 			break;
+        case 'E':
+            cb->serv_poll = 1;
+			DEBUG_LOG("using serv_poll\n");
+            break;
 		default:
 			printk(KERN_ERR PFX "unknown opt %s\n", optarg);
 			ret = -EINVAL;
