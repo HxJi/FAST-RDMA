@@ -102,7 +102,16 @@ struct krping_stats {
 #define htonll(x) cpu_to_be64((x))
 #define ntohll(x) cpu_to_be64((x))
 
-#define ON_ARM
+#define NUM_RECORD 256
+u64 record1[NUM_RECORD];
+u64 record2[NUM_RECORD];
+u64 record3[NUM_RECORD];
+u64 record4[NUM_RECORD];
+u64 record5[NUM_RECORD];
+u64 record6[NUM_RECORD];
+u64 record7[NUM_RECORD];
+
+//#define ON_ARM
 #ifdef ON_ARM
 #define isb()    asm volatile("isb" : : : "memory")
 static inline uint64_t
@@ -273,6 +282,20 @@ struct krping_cb {
 	struct rdma_cm_id *child_cm_id;	/* connection on server side */
 	struct list_head list;
 };
+
+static void print_record(u64* arr, u64 cnt) {
+    u64 num_row, i;
+    printk("[print_record] ======================= \n");
+
+    if (cnt >= NUM_RECORD) {
+        num_row = NUM_RECORD;
+    } else {
+        num_row = cnt;
+    }
+    for (i = 0; i < num_row; i++) {
+        printk("%llu\n", arr[i]);
+    }
+}
 
 static int krping_cma_event_handler(struct rdma_cm_id *cma_id,
 				   struct rdma_cm_event *event)
@@ -1252,7 +1275,11 @@ static void krping_test_client(struct krping_cb *cb)
             printk(KERN_INFO PFX "post_send   : %llu\n", seg2_sum / run_cnt);
             printk(KERN_INFO PFX "wait_interr : %llu\n", seg3_sum / run_cnt);
         }
-
+        if (run_cnt < NUM_RECORD) {
+            record1[run_cnt] = t2 - t1;
+            record2[run_cnt] = t3 - t2;
+            record3[run_cnt] = t4 - t3;
+        }
 			
 #ifdef SLOW_KRPING
 		wait_event_interruptible_timeout(cb->sem, cb->state == ERROR, HZ);
@@ -1410,6 +1437,11 @@ static void krping_run_client(struct krping_cb *cb)
         krping_test_client(cb);
     }*/
 	rdma_disconnect(cb->cm_id);
+    
+    print_record(record1, run_cnt);
+    print_record(record2, run_cnt);
+    print_record(record3, run_cnt);
+
 err2:
 	krping_free_buffers(cb);
 err1:
@@ -1435,7 +1467,7 @@ int krping_doit(char *cmd)
 
 	cb->server = -1;
 	cb->state = IDLE;
-	cb->size = 64;
+	cb->size = 4096;
 	cb->txdepth = RPING_SQ_DEPTH;
 	init_waitqueue_head(&cb->sem);
 
