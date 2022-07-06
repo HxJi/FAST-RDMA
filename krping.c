@@ -102,7 +102,7 @@ struct krping_stats {
 #define htonll(x) cpu_to_be64((x))
 #define ntohll(x) cpu_to_be64((x))
 
-#define ON_ARM
+//#define ON_ARM
 #ifdef ON_ARM
 #define isb()    asm volatile("isb" : : : "memory")
 static inline uint64_t
@@ -1084,8 +1084,8 @@ static void krping_run_server(struct krping_cb *cb)
 		goto err2;
 	}
 	
-	//krping_test_server(cb);
-	krping_test_server_serv_poll(cb);
+	krping_test_server(cb);
+	//krping_test_server_serv_poll(cb);
 
 	/*
     if (cb->serv_poll) {
@@ -1356,8 +1356,8 @@ static void krping_run_client(struct krping_cb *cb)
 		goto err2;
 	}
 
-    //krping_test_client(cb);
-    krping_test_client_serv_poll(cb);
+    krping_test_client(cb);
+    //krping_test_client_serv_poll(cb);
 
     /*
     if (cb->serv_poll) {
