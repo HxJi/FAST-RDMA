@@ -102,7 +102,7 @@ struct krping_stats {
 #define htonll(x) cpu_to_be64((x))
 #define ntohll(x) cpu_to_be64((x))
 
-//#define ON_ARM
+#define ON_ARM
 #ifdef ON_ARM
 #define isb()    asm volatile("isb" : : : "memory")
 static inline uint64_t
@@ -303,9 +303,11 @@ static int krping_cma_event_handler(struct rdma_cm_id *cma_id,
 
 	case RDMA_CM_EVENT_ESTABLISHED:
 		DEBUG_LOG("ESTABLISHED\n");
+		cb->state = CONNECTED;
+		/*
 		if (!cb->server) {
 			cb->state = CONNECTED;
-		}
+		}*/
 		wake_up_interruptible(&cb->sem);
 		break;
 
@@ -820,15 +822,24 @@ static void krping_test_server_serv_poll(struct krping_cb *cb) {
 	const struct ib_send_wr *bad_wr;
 	int ret;
     
+    printk("[server serv_poll]\n");
+
     wait_event_interruptible(cb->sem, cb->state >= RDMA_READ_ADV);
     if (cb->state != RDMA_READ_ADV) {
         printk(KERN_ERR PFX "wait for RDMA_READ_ADV state %d\n",
             cb->state);
     }
 
-    DEBUG_LOG("[server serv_poll] hand shake received\n");
+    printk("[server serv_poll] hand shake received\n");
+   	
+    krping_format_send(cb, cb->rdma_dma_addr);
+    ret = ib_post_send(cb->qp, &cb->sq_wr, &bad_wr); // FIXME
+	if (ret) {
+		printk(KERN_ERR PFX "send err %d\n", ret);
+		return;
+	}
     
-    
+    printk("[server serv_poll] hand shake replied\n");
     /*
     while (1) {
     }*/
@@ -1072,12 +1083,16 @@ static void krping_run_server(struct krping_cb *cb)
 		printk(KERN_ERR PFX "connect error %d\n", ret);
 		goto err2;
 	}
+	
+	//krping_test_server(cb);
+	krping_test_server_serv_poll(cb);
 
+	/*
     if (cb->serv_poll) {
         krping_test_server_serv_poll(cb);
     } else {
         krping_test_server(cb);
-    }
+    }*/
 	rdma_disconnect(cb->child_cm_id);
 err2:
 	krping_free_buffers(cb);
