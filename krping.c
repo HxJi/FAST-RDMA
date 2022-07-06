@@ -1220,21 +1220,22 @@ static void krping_test_client(struct krping_cb *cb)
 
     krping_format_send(cb, cb->rdma_dma_addr);
 
+    /* Put some ascii text in the buffer. */
+    cc = sprintf(cb->rdma_buf, "rdma-ping-%d: ", ping);
+    for (i = cc, c = start; i < cb->size; i++) {
+        cb->rdma_buf[i] = c;
+        c++;
+        if (c > 122)
+            c = 65;
+    }
+    start++;
+    if (start > 122)
+        start = 65;
+    cb->rdma_buf[cb->size - 1] = 0;
+
 	for (ping = 0; !cb->count || ping < cb->count; ping++) {
 		cb->state = RDMA_READ_ADV;
 
-		/* Put some ascii text in the buffer. */
-		cc = sprintf(cb->rdma_buf, "rdma-ping-%d: ", ping);
-		for (i = cc, c = start; i < cb->size; i++) {
-			cb->rdma_buf[i] = c;
-			c++;
-			if (c > 122)
-				c = 65;
-		}
-		start++;
-		if (start > 122)
-			start = 65;
-		cb->rdma_buf[cb->size - 1] = 0;
 
 		//printk(KERN_INFO PFX "ping data (64B max): |%.64s|\n", cb->rdma_buf);
         
@@ -1467,7 +1468,7 @@ int krping_doit(char *cmd)
 
 	cb->server = -1;
 	cb->state = IDLE;
-	cb->size = 4096;
+	cb->size = 8192;
 	cb->txdepth = RPING_SQ_DEPTH;
 	init_waitqueue_head(&cb->sem);
 
