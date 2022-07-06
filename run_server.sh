@@ -1,6 +1,6 @@
 
 #!bin/bash
 
-make && sudo make install && sudo modprobe rdma_krping debug=1 &&
+make && sudo make install && sudo modprobe rdma_krping debug=0 &&
 #echo "server,addr=192.168.101.14,port=20886,verbose" >/proc/krping
-echo "server,addr=192.168.101.14,port=20886,verbose" >/proc/krping
+echo "server,addr=192.168.101.14,port=20886" >/proc/krping

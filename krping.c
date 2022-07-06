@@ -102,7 +102,7 @@ struct krping_stats {
 #define htonll(x) cpu_to_be64((x))
 #define ntohll(x) cpu_to_be64((x))
 
-//#define ON_ARM
+#define ON_ARM
 #ifdef ON_ARM
 #define isb()    asm volatile("isb" : : : "memory")
 static inline uint64_t
@@ -115,7 +115,12 @@ arm64_pmccntr(void)
 static inline uint64_t
 rdtsc(void)
 {
+/*
    return arm64_pmccntr();
+   */
+	u64 val;
+	asm volatile("mrs %0, cntvct_el0" : "=r" (val));
+	return val;
 }
 static void enable_pmu_pmccntr(void)
 {
@@ -139,7 +144,7 @@ static LIST_HEAD(krping_cbs);
 
 static struct proc_dir_entry *krping_proc;
 
-uint64_t seg1_sum, seg2_sum, seg3_sum, run_cnt;
+uint64_t seg1_sum, seg2_sum, seg3_sum, seg4_sum, seg5_sum, seg6_sum, seg7_sum, run_cnt;
 
 /*
  * Invoke like this, one on each side, using the server's address on
@@ -851,14 +856,21 @@ static void krping_test_server(struct krping_cb *cb)
 	const struct ib_send_wr *bad_wr;
 	int ret;
 
+	uint64_t t1, t2, t3, t4, t5, t6, t7, t8;
+
 	while (1) {
 		/* Wait for client's Start STAG/TO/Len */
+
+		// timer =============== 
+		t1 = rdtsc();	
 		wait_event_interruptible(cb->sem, cb->state >= RDMA_READ_ADV);
 		if (cb->state != RDMA_READ_ADV) {
 			printk(KERN_ERR PFX "wait for RDMA_READ_ADV state %d\n",
 				cb->state);
 			break;
 		}
+		// timer =============== 
+		t2 = rdtsc();	
 
 		DEBUG_LOG("server received sink adv\n");
 
@@ -891,6 +903,8 @@ static void krping_test_server(struct krping_cb *cb)
 			break;
 		}
 		cb->rdma_sq_wr.wr.next = NULL;
+		// timer =============== 
+		t3 = rdtsc();	
 
 		DEBUG_LOG("server posted rdma read req \n");
 
@@ -904,6 +918,8 @@ static void krping_test_server(struct krping_cb *cb)
 			break;
 		}
 		DEBUG_LOG("server received read complete\n");
+		// timer =============== 
+		t4 = rdtsc();	
 
 		/* Display data in recv buf */
 		if (cb->verbose)
@@ -923,6 +939,8 @@ static void krping_test_server(struct krping_cb *cb)
 		else if(cmp_res > 0) result = 101;
 		else	result = 99;
 		cb->rdma_buf[0] = result;
+		// timer =============== 
+		t5 = rdtsc();	
 
 		/* RDMA Write echo data */
 		cb->rdma_sq_wr.wr.opcode = IB_WR_RDMA_WRITE;
@@ -945,6 +963,8 @@ static void krping_test_server(struct krping_cb *cb)
 			printk(KERN_ERR PFX "post send error %d\n", ret);
 			break;
 		}
+		// timer =============== 
+		t6 = rdtsc();	
 
 		/* Wait for completion */
 		ret = wait_event_interruptible(cb->sem, cb->state >= 
@@ -956,6 +976,8 @@ static void krping_test_server(struct krping_cb *cb)
 			break;
 		}
 		DEBUG_LOG("server rdma write complete \n");
+		// timer =============== 
+		t7 = rdtsc();	
 
 		cb->state = CONNECTED;
 
@@ -972,6 +994,28 @@ static void krping_test_server(struct krping_cb *cb)
 			break;
 		}
 		DEBUG_LOG("server posted go ahead\n");
+		// timer =============== 
+		t8 = rdtsc();	
+
+        seg1_sum += t2 - t1;
+        seg2_sum += t3 - t2;
+        seg3_sum += t4 - t3;
+        seg4_sum += t5 - t4;
+        seg5_sum += t6 - t5;
+        seg6_sum += t7 - t6;
+        seg7_sum += t8 - t7;
+
+        run_cnt++;
+        if (run_cnt % 50 == 0) {
+            printk(KERN_INFO PFX "iter: %llu ==================\n", run_cnt);
+            printk(KERN_INFO PFX "wait_req    : %llu\n", seg1_sum / run_cnt);
+            printk(KERN_INFO PFX "issue_read  : %llu\n", seg2_sum / run_cnt);
+            printk(KERN_INFO PFX "read_done   : %llu\n", seg3_sum / run_cnt);
+            printk(KERN_INFO PFX "page_cmp    : %llu\n", seg4_sum / run_cnt);
+            printk(KERN_INFO PFX "result_wr   : %llu\n", seg5_sum / run_cnt);
+            printk(KERN_INFO PFX "write_done  : %llu\n", seg6_sum / run_cnt);
+            printk(KERN_INFO PFX "done_trigger: %llu\n", seg7_sum / run_cnt);
+        }
 	}
 }
 
@@ -1613,10 +1657,12 @@ static int __init krping_init(void)
 		printk(KERN_ERR PFX "cannot create /proc/krping\n");
 		return -ENOMEM;
 	}
-    seg1_sum = 0;
-    seg2_sum = 0;
-    seg3_sum = 0;
-    run_cnt = 0;
+
+#ifdef ON_ARM
+	enable_pmu_pmccntr();
+#endif // ON_ARM
+
+	seg1_sum, seg2_sum, seg3_sum, seg4_sum, seg5_sum, seg6_sum, seg7_sum, run_cnt = 0;
 	return 0;
 }
 
