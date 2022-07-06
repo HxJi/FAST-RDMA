@@ -811,7 +811,7 @@ static void krping_format_send(struct krping_cb *cb, u64 buf)
     info->buf = htonll(buf);
     info->rkey = htonl(rkey);
     info->size = htonl(cb->size);
-    DEBUG_LOG("RDMA addr %llx rkey %x len %d\n",
+    DEBUG_LOG("[format_send] RDMA addr %llx rkey %x len %d\n",
           (unsigned long long)buf, rkey, cb->size);
 }
 
@@ -826,7 +826,7 @@ static void krping_test_server_serv_poll(struct krping_cb *cb) {
             cb->state);
     }
 
-    DEBUG_LOG("[client serv_poll] hand shake received\n");
+    DEBUG_LOG("[server serv_poll] hand shake received\n");
     
     
     /*
@@ -1094,6 +1094,8 @@ static void krping_test_client_serv_poll(struct krping_cb *cb) {
     
     // host --> SmartNIC
     krping_format_send(cb, cb->rdma_dma_addr);
+	ret = ib_post_send(cb->qp, &cb->sq_wr, &bad_wr);
+    DEBUG_LOG("[client serv_poll] hand shake sent\n");
 
     // host <-- SmartNIC
     wait_event_interruptible(cb->sem, cb->state >= RDMA_WRITE_ADV);
@@ -1103,9 +1105,7 @@ static void krping_test_client_serv_poll(struct krping_cb *cb) {
                cb->state);
         return;
     }
-    DEBUG_LOG("[server serv_poll] hand shake received\n");
-    return;
-
+    DEBUG_LOG("[client serv_poll] hand shake received\n");
 
 	for (ping = 0; !cb->count || ping < cb->count; ping++) {
 		/* Put some ascii text in the buffer. */
@@ -1120,6 +1120,8 @@ static void krping_test_client_serv_poll(struct krping_cb *cb) {
 		if (start > 122)
 			start = 65;
 		cb->rdma_buf[cb->size - 1] = 0;
+
+        ret = ib_post_send(cb->qp, &cb->sq_wr, &bad_wr);
     }
 }
 
@@ -1339,11 +1341,15 @@ static void krping_run_client(struct krping_cb *cb)
 		goto err2;
 	}
 
+    //krping_test_client(cb);
+    krping_test_client_serv_poll(cb);
+
+    /*
     if (cb->serv_poll) {
         krping_test_client_serv_poll(cb);
     } else {
         krping_test_client(cb);
-    }
+    }*/
 	rdma_disconnect(cb->cm_id);
 err2:
 	krping_free_buffers(cb);
