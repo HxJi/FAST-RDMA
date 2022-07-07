@@ -30,6 +30,11 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+
+#include <linux/io.h>
+#include <linux/delay.h>
+#include <linux/kthread.h>
+
 #include <linux/version.h>
 #include <linux/module.h>
 #include <linux/moduleparam.h>
@@ -58,6 +63,26 @@
 #include "getopt.h"
 
 #define PFX "krping: "
+
+#define RAND_PAGE 1
+#define FILL_ONE  2
+#define FILL_PAGE 3
+
+//#define ON_ARM
+
+#ifndef ON_ARM
+
+#include <linux/kernel.h>
+#include <linux/pagemap.h>
+#include <linux/completion.h>
+#include <linux/async_tx.h>
+#include <linux/blkdev.h>
+#include <linux/slab.h>
+#include <linux/crc32c.h>
+#include <linux/dmaengine.h>
+#include <linux/dma-mapping.h>
+
+#endif // ON_ARM
 
 static int debug = 1;
 module_param(debug, int, 0);
@@ -111,9 +136,59 @@ u64 record5[NUM_RECORD];
 u64 record6[NUM_RECORD];
 u64 record7[NUM_RECORD];
 
-#define ON_ARM
+// #define ON_ARM
+// IOAT, DMA variable
+struct dma_chan *chan = NULL;
+struct dma_device *device = NULL;
+dma_cap_mask_t mask;
+struct completion comp;
+dma_cookie_t dma_cookie;
+enum dma_ctrl_flags flags;
+unsigned long timeout;
+enum dma_status status;
+addr_conv_t addr_conv[2];
+
+struct dma_async_tx_descriptor *tx = NULL;
+struct dmaengine_unmap_data *unmap = NULL;
+struct async_submit_ctl submit;
+
+void callback(void *param)
+{
+	struct completion *cmp = param;
+	complete(cmp);
+	//printk("DMA Call Back\n");
+}
+
 #ifdef ON_ARM
 #define isb()    asm volatile("isb" : : : "memory")
+
+static inline void init_perfcounters (int32_t do_reset, int32_t enable_divider)
+{
+  // in general enable all counters (including cycle counter)
+  int32_t value = 1;
+
+  // peform reset:  
+  if (do_reset)
+  {
+    value |= 2;     // reset all counters to zero.
+    value |= 4;     // reset cycle counter to zero.
+  } 
+
+  if (enable_divider)
+    value |= 8;     // enable "by 64" divider for CCNT.
+
+  value |= 16;
+
+  // program the performance-counter control-register:
+  asm volatile ("MCR p15, 0, %0, c9, c12, 0\t\n" :: "r"(value));  
+
+  // enable all counters:  
+  asm volatile ("MCR p15, 0, %0, c9, c12, 1\t\n" :: "r"(0x8000000f));  
+
+  // clear overflows:
+  asm volatile ("MCR p15, 0, %0, c9, c12, 3\t\n" :: "r"(0x8000000f));
+}
+
 static inline uint64_t
 arm64_pmccntr(void)
 {
@@ -124,12 +199,20 @@ arm64_pmccntr(void)
 static inline uint64_t
 rdtsc(void)
 {
-/*
-   return arm64_pmccntr();
-   */
+    // method 1
+    //return arm64_pmccntr();
+    
+    // method 2
+    /*
 	u64 val;
 	asm volatile("mrs %0, cntvct_el0" : "=r" (val));
-	return val;
+	return val;*/
+
+    // method 3, https://stackoverflow.com/questions/3247373/how-to-measure-program-execution-time-in-arm-cortex-a8-processor
+    unsigned int value;
+    // Read CCNT Register
+    asm volatile ("MRC p15, 0, %0, c9, c13, 0\t\n": "=r"(value));
+    return (u64)value;
 }
 static void enable_pmu_pmccntr(void)
 {
@@ -282,6 +365,33 @@ struct krping_cb {
 	struct rdma_cm_id *child_cm_id;	/* connection on server side */
 	struct list_head list;
 };
+ 
+static void write_page(char* addr, int op, char fill, int fill_at) {
+	int i, rand;
+
+	if (!addr) {
+		printk("[write_page] null ptr\n");
+		return;
+	}
+
+	for (i = 0; i < 4096; i++) {
+		switch(op) {
+			case FILL_PAGE:
+				addr[i] = fill;
+				break;
+			case RAND_PAGE:
+				get_random_bytes(&rand, sizeof(rand));
+				addr[i] = (char)(rand & 0x7f);
+				break;
+			case FILL_ONE:
+				if (i == fill_at) {
+					addr[fill_at] = fill;
+				} else {
+					addr[i] = 0;
+				}
+		}
+	}
+}
 
 static void print_record(u64* arr, u64 cnt) {
     u64 num_row, i;
@@ -296,6 +406,87 @@ static void print_record(u64* arr, u64 cnt) {
         printk("%llu\n", arr[i]);
     }
 }
+
+static int init_ioat(void) {
+    init_async_submit(&submit, 0, NULL, NULL, NULL, addr_conv);
+
+    dma_cap_zero(mask);
+    dma_cap_set(DMA_MEMCPY, mask);
+
+    chan = dma_request_channel(mask, NULL, NULL);
+
+    if (chan == NULL) {
+        pr_err("Invalid DMA channel\n");
+        return -1;
+    }
+    else{
+        device = chan->device;
+		pr_err("Valid DMA device\n");
+    }
+	return 0;
+}
+
+static int ioat_cp(char* src_addr, char* dest_addr, int len) {
+	// DMA Mapping
+	int ret;
+	uint64_t t1, t2, t3, t4, t5; 
+	int map_len;
+
+	if (len < 4096) {
+		map_len = 4096;
+	} else {
+		map_len = len;
+	}
+
+	ret = 0;
+	volatile dma_addr_t dma_src, dma_dst;
+	dma_src = dma_map_single(device->dev, src_addr, map_len, DMA_TO_DEVICE);
+    dma_dst = dma_map_single(device->dev, dest_addr, map_len, DMA_FROM_DEVICE);
+
+	// IOAT Memcpy
+	flags = DMA_CTRL_ACK | DMA_PREP_INTERRUPT;
+    init_completion(&comp);
+	
+	tx = dmaengine_prep_dma_memcpy(chan, dma_dst, dma_src, len, flags);
+	if (IS_ERR_OR_NULL(tx)) { 
+        pr_err("preparation dma failure.\n"); 
+		ret = -1;
+        goto out;
+    }
+	tx->callback = callback;
+	tx->callback_param = &comp;
+
+	t1 = rdtsc();	
+	dma_cookie = dmaengine_submit(tx);
+	t2 = rdtsc();	
+	dma_async_issue_pending(chan);
+	t3 = rdtsc();	
+	timeout = wait_for_completion_timeout(&comp, msecs_to_jiffies(5000));
+	t4 = rdtsc();	
+	status = dma_async_is_tx_complete(chan, dma_cookie, NULL, NULL);
+	t5 = rdtsc();	
+
+	if (timeout == 0) {
+		ret = -1;
+		printk(KERN_WARNING "DMA timed out.\n");
+	} else if (status != DMA_COMPLETE) {
+		ret = -1;
+		printk(KERN_INFO "DMA returned completion status of: %s\n",
+            status == DMA_ERROR ? "error" : "in progress");
+	} else {
+		//printk(KERN_INFO "DMA completed!\n");
+	}
+	// printk(KERN_INFO "[ioat_cp] 1: %llu\n", t2 - t1);
+	// printk(KERN_INFO "[ioat_cp] 2: %llu\n", t3 - t2);
+	// printk(KERN_INFO "[ioat_cp] 3: %llu\n", t4 - t3);
+	// printk(KERN_INFO "[ioat_cp] 4: %llu\n", t5 - t4);
+out:
+	dma_unmap_single(device->dev, dma_src, map_len, DMA_TO_DEVICE);
+	dma_unmap_single(device->dev, dma_dst, map_len, DMA_FROM_DEVICE);
+	return ret;
+}
+
+
 
 static int krping_cma_event_handler(struct rdma_cm_id *cma_id,
 				   struct rdma_cm_event *event)
@@ -1198,6 +1389,18 @@ static void krping_test_client_serv_poll(struct krping_cb *cb) {
     }
     DEBUG_LOG("[client serv_poll] hand shake received\n");
 
+    cb->rdma_sq_wr.wr.opcode = IB_WR_RDMA_WRITE;
+    cb->rdma_sq_wr.rkey = cb->remote_rkey;
+    cb->rdma_sq_wr.remote_addr = cb->remote_addr;
+    cb->rdma_sq_wr.wr.sg_list->length = cb->remote_len;
+    cb->rdma_sgl.lkey = krping_rdma_rkey(cb, cb->rdma_dma_addr, !cb->read_inv);
+    cb->rdma_sq_wr.wr.next = NULL;
+
+    DEBUG_LOG("[client serv_poll]rdma write from lkey %x laddr %llx len %d\n",
+          cb->rdma_sq_wr.wr.sg_list->lkey,
+          (unsigned long long)cb->rdma_sq_wr.wr.sg_list->addr,
+          cb->rdma_sq_wr.wr.sg_list->length);
+
 	for (ping = 0; !cb->count || ping < cb->count; ping++) {
 		/* Put some ascii text in the buffer. */
 		cc = sprintf(cb->rdma_buf, "rdma-ping-%d: ", ping);
@@ -1216,25 +1419,86 @@ static void krping_test_client_serv_poll(struct krping_cb *cb) {
     }
 }
 
+static void cpu_cmp_test(int iter, struct krping_cb *cb) {
+    char* page1;
+    char* page2;
+    char* page3;
+    char* page4;
+    int ret, i;
+    u64 t1, t2, t3, sum1, sum2;
+
+    sum1 = 0;
+    sum2 = 0;
+
+    page1 = kmalloc(4096, GFP_KERNEL);
+    page2 = kmalloc(4096, GFP_KERNEL);
+    page3 = kmalloc(4096, GFP_KERNEL);
+    page4 = kmalloc(4096, GFP_KERNEL);
+    
+    for (i = 1; i < (iter + 1); i++) {
+
+        write_page((char*)page1, RAND_PAGE, 0, 0);
+        write_page((char*)page2, RAND_PAGE, 0, 0);
+        
+        t1 = rdtsc();
+
+        //ioat_cp(page1, page3, 4096);
+        //ioat_cp(page2, page3, 4096);
+        ioat_cp(page1, cb->rdma_buf, 4096);
+        ioat_cp(page2, (cb->rdma_buf + 4096), 4096);
+
+        /*
+        memcpy(page3, page1, 4096);
+        memcpy(page4, page2, 4096);*/
+        t2 = rdtsc();
+        
+        ret = memcmp(page3, page4, 4096);
+        t3 = rdtsc();
+
+        sum1 += t2 - t1;
+        sum2 += t3 - t2;
+        if (i % 50 == 0) {
+            printk(KERN_INFO PFX "iter: %d ==================\n", i);
+            printk(KERN_INFO PFX "copy: %llu\n", sum1 / (u64)i);
+            printk(KERN_INFO PFX "cmp : %llu\n", sum2 / (u64)i);
+        }
+    }
+
+    kfree(page1);
+    kfree(page2);
+    kfree(page3);
+    kfree(page4);
+}
+
 static void krping_test_client(struct krping_cb *cb)
 {
 	int ping, start, cc, i, ret;
 	const struct ib_send_wr *bad_wr;
 	unsigned char c;
+    char* page1;
+    char* page2;
     
     uint64_t t1, t2, t3, t4;
 
     printk("pre-run client state: %d\n", cb->state);
-	start = 65;
 
     krping_format_send(cb, cb->rdma_dma_addr);
+    if (cb->state == ERROR) {
+        printk(KERN_ERR PFX "krping_format_send failed\n");
+        return;
+    }
+
+    page1 = kmalloc(4096, GFP_KERNEL);
+    page2 = kmalloc(4096, GFP_KERNEL);
 
     /* Put some ascii text in the buffer. */
+	start = 65;
     cc = sprintf(cb->rdma_buf, "rdma-ping-%d: ", ping);
     for (i = cc, c = start; i < cb->size; i++) {
-        cb->rdma_buf[i] = c;
+        page1[i] = c + 1;
+        page2[i] = c;
         c++;
-        if (c > 122)
+        if (c > 121)
             c = 65;
     }
     start++;
@@ -1244,15 +1508,12 @@ static void krping_test_client(struct krping_cb *cb)
 
 	for (ping = 0; !cb->count || ping < cb->count; ping++) {
 		cb->state = RDMA_READ_ADV;
-
-
+           
 		//printk(KERN_INFO PFX "ping data (64B max): |%.64s|\n", cb->rdma_buf);
         
         t1 = rdtsc();
-		if (cb->state == ERROR) {
-			printk(KERN_ERR PFX "krping_format_send failed\n");
-			break;
-		}
+        ioat_cp(page1, cb->rdma_buf, 4096);
+        ioat_cp(page2, (cb->rdma_buf + 4096), 4096);
         t2 = rdtsc();
 
 		ret = ib_post_send(cb->qp, &cb->sq_wr, &bad_wr);
@@ -1295,6 +1556,9 @@ static void krping_test_client(struct krping_cb *cb)
 		wait_event_interruptible_timeout(cb->sem, cb->state == ERROR, HZ);
 #endif
 	}
+
+    kfree(page1);
+    kfree(page2);
 }
 
 /*
@@ -1437,8 +1701,9 @@ static void krping_run_client(struct krping_cb *cb)
 		goto err2;
 	}
 
-    krping_test_client(cb);
-    //krping_test_client_serv_poll(cb);
+    //krping_test_client(cb);
+    krping_test_client_serv_poll(cb);
+    //cpu_cmp_test(500, cb);
 
     /*
     if (cb->serv_poll) {
@@ -1699,8 +1964,13 @@ static int __init krping_init(void)
 		printk(KERN_ERR PFX "cannot create /proc/krping\n");
 		return -ENOMEM;
 	}
+#ifndef ON_ARM
+	chan = NULL; // avoid accidentially release a void chan
+	init_ioat();
+#endif 
 
 #ifdef ON_ARM
+    init_perfcounters(1, 0);
 	enable_pmu_pmccntr();
 #endif // ON_ARM
 
@@ -1712,6 +1982,12 @@ static void __exit krping_exit(void)
 {
 	DEBUG_LOG("krping_exit\n");
 	remove_proc_entry("krping", NULL);
+
+#ifndef ON_ARM
+	if (chan) {
+		dma_release_channel(chan);
+	}
+#endif
 }
 
 module_init(krping_init);
