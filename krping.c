@@ -68,7 +68,7 @@
 #define FILL_ONE  2
 #define FILL_PAGE 3
 
-//#define ON_ARM
+#define ON_ARM
 
 #ifndef ON_ARM
 
@@ -137,6 +137,8 @@ u64 record6[NUM_RECORD];
 u64 record7[NUM_RECORD];
 
 // #define ON_ARM
+
+#ifndef ON_ARM
 // IOAT, DMA variable
 struct dma_chan *chan = NULL;
 struct dma_device *device = NULL;
@@ -158,36 +160,10 @@ void callback(void *param)
 	complete(cmp);
 	//printk("DMA Call Back\n");
 }
+#endif //ON_ARM
 
 #ifdef ON_ARM
 #define isb()    asm volatile("isb" : : : "memory")
-
-static inline void init_perfcounters (int32_t do_reset, int32_t enable_divider)
-{
-  // in general enable all counters (including cycle counter)
-  int32_t value = 1;
-
-  // peform reset:  
-  if (do_reset)
-  {
-    value |= 2;     // reset all counters to zero.
-    value |= 4;     // reset cycle counter to zero.
-  } 
-
-  if (enable_divider)
-    value |= 8;     // enable "by 64" divider for CCNT.
-
-  value |= 16;
-
-  // program the performance-counter control-register:
-  asm volatile ("MCR p15, 0, %0, c9, c12, 0\t\n" :: "r"(value));  
-
-  // enable all counters:  
-  asm volatile ("MCR p15, 0, %0, c9, c12, 1\t\n" :: "r"(0x8000000f));  
-
-  // clear overflows:
-  asm volatile ("MCR p15, 0, %0, c9, c12, 3\t\n" :: "r"(0x8000000f));
-}
 
 static inline uint64_t
 arm64_pmccntr(void)
@@ -202,17 +178,19 @@ rdtsc(void)
     // method 1
     //return arm64_pmccntr();
     
-    // method 2
-    /*
+    // method 2, https://stackoverflow.com/questions/40454157/is-there-an-equivalent-instruction-to-rdtsc-in-arm
 	u64 val;
 	asm volatile("mrs %0, cntvct_el0" : "=r" (val));
-	return val;*/
+	return val;
 
     // method 3, https://stackoverflow.com/questions/3247373/how-to-measure-program-execution-time-in-arm-cortex-a8-processor
+	// Does not work, https://stackoverflow.com/questions/32374599/mcr-and-mrc-does-not-exist-on-aarch64
+	/*
     unsigned int value;
     // Read CCNT Register
     asm volatile ("MRC p15, 0, %0, c9, c13, 0\t\n": "=r"(value));
     return (u64)value;
+	*/
 }
 static void enable_pmu_pmccntr(void)
 {
@@ -407,6 +385,7 @@ static void print_record(u64* arr, u64 cnt) {
     }
 }
 
+#ifndef ON_ARM
 static int init_ioat(void) {
     init_async_submit(&submit, 0, NULL, NULL, NULL, addr_conv);
 
@@ -485,6 +464,7 @@ out:
 	dma_unmap_single(device->dev, dma_dst, map_len, DMA_FROM_DEVICE);
 	return ret;
 }
+#endif // ON_ARM
 
 
 
@@ -1444,8 +1424,10 @@ static void cpu_cmp_test(int iter, struct krping_cb *cb) {
 
         //ioat_cp(page1, page3, 4096);
         //ioat_cp(page2, page3, 4096);
+#ifndef ON_ARM
         ioat_cp(page1, cb->rdma_buf, 4096);
         ioat_cp(page2, (cb->rdma_buf + 4096), 4096);
+#endif // ON_ARM
 
         /*
         memcpy(page3, page1, 4096);
@@ -1512,8 +1494,10 @@ static void krping_test_client(struct krping_cb *cb)
 		//printk(KERN_INFO PFX "ping data (64B max): |%.64s|\n", cb->rdma_buf);
         
         t1 = rdtsc();
+#ifndef ON_ARM
         ioat_cp(page1, cb->rdma_buf, 4096);
         ioat_cp(page2, (cb->rdma_buf + 4096), 4096);
+#endif // ON_ARM
         t2 = rdtsc();
 
 		ret = ib_post_send(cb->qp, &cb->sq_wr, &bad_wr);
@@ -1970,7 +1954,6 @@ static int __init krping_init(void)
 #endif 
 
 #ifdef ON_ARM
-    init_perfcounters(1, 0);
 	enable_pmu_pmccntr();
 #endif // ON_ARM
 
