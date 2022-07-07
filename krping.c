@@ -111,7 +111,7 @@ u64 record5[NUM_RECORD];
 u64 record6[NUM_RECORD];
 u64 record7[NUM_RECORD];
 
-//#define ON_ARM
+#define ON_ARM
 #ifdef ON_ARM
 #define isb()    asm volatile("isb" : : : "memory")
 static inline uint64_t
@@ -851,6 +851,7 @@ static void krping_test_server_serv_poll(struct krping_cb *cb) {
 	int ret;
     
     printk("[server serv_poll]\n");
+	cb->rdma_buf[0] = 0;
 
     wait_event_interruptible(cb->sem, cb->state >= RDMA_READ_ADV);
     if (cb->state != RDMA_READ_ADV) {
@@ -860,6 +861,7 @@ static void krping_test_server_serv_poll(struct krping_cb *cb) {
 
     printk("[server serv_poll] hand shake received\n");
    	
+	cb->sq_wr.opcode = IB_WR_SEND_WITH_INV;
     krping_format_send(cb, cb->rdma_dma_addr);
     ret = ib_post_send(cb->qp, &cb->sq_wr, &bad_wr); // FIXME
 	if (ret) {
@@ -868,9 +870,16 @@ static void krping_test_server_serv_poll(struct krping_cb *cb) {
 	}
     
     printk("[server serv_poll] hand shake replied\n");
-    /*
-    while (1) {
-    }*/
+
+	ret = 0;
+    while (ret < (1<<30)) {
+		if (cb->rdma_buf[0] != 0) {
+			printk("[server serv_poll] OK, new data: %d, counter:%d \n", cb->rdma_buf[0], ret);
+			return;
+		}
+		ret++;
+    }
+	printk("[server serv_poll] BAD, new data: %d, counter:%d \n", cb->rdma_buf[0], ret);
 }
 
 static void krping_test_server(struct krping_cb *cb)
@@ -969,7 +978,7 @@ static void krping_test_server(struct krping_cb *cb)
 		cb->rdma_sq_wr.wr.opcode = IB_WR_RDMA_WRITE;
 		cb->rdma_sq_wr.rkey = cb->remote_rkey;
 		cb->rdma_sq_wr.remote_addr = cb->remote_addr;
-		cb->rdma_sq_wr.wr.sg_list->length = strlen(cb->rdma_buf) + 1;
+		cb->rdma_sq_wr.wr.sg_list->length = 64;
 		// cb->rdma_sq_wr.wr.sg_list->length = cb->remote_len;
 		if (cb->local_dma_lkey)
 			cb->rdma_sgl.lkey = cb->pd->local_dma_lkey;
@@ -1151,8 +1160,8 @@ static void krping_run_server(struct krping_cb *cb)
 		goto err2;
 	}
 	
-	krping_test_server(cb);
-	//krping_test_server_serv_poll(cb);
+	//krping_test_server(cb);
+	krping_test_server_serv_poll(cb);
 
 	/*
     if (cb->serv_poll) {
