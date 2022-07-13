@@ -1,0 +1,2547 @@
+[ 4844.827181] Received rkey 4055e addr 11941bc000 len 8193 from peer
+[ 4844.827193] server received sink adv
+[ 4844.827196] krping: post_inv = 1, reg_mr new rkey 0x105bb pgsz 4096 len 8193 iova_start fd070000
+[ 4844.827199] server posted rdma read req 
+[ 4844.827206] rdma read completion
+[ 4844.827216] server received read complete
+[ 4844.827233] compression complete
+[ 4844.827235] krping: post_inv = 0, reg_mr new rkey 0x105bc pgsz 4096 len 8193 iova_start fd070000
+[ 4844.827237] rdma write from lkey 105bc laddr fd070000 len 8193
+[ 4844.827245] rdma write completion
+[ 4844.827253] server rdma write complete 
+[ 4844.827255] server posted go ahead
+[ 4844.827261] send completion
+[ 4844.835125] recv completion
+[ 4844.835127] Received rkey 4055f addr 11941bc000 len 8193 from peer
+[ 4844.835137] server received sink adv
+[ 4844.835140] krping: post_inv = 1, reg_mr new rkey 0x105bd pgsz 4096 len 8193 iova_start fd070000
+[ 4844.835143] server posted rdma read req 
+[ 4844.835151] rdma read completion
+[ 4844.835161] server received read complete
+[ 4844.835172] compression complete
+[ 4844.835174] krping: post_inv = 0, reg_mr new rkey 0x105be pgsz 4096 len 8193 iova_start fd070000
+[ 4844.835177] rdma write from lkey 105be laddr fd070000 len 8193
+[ 4844.835184] rdma write completion
+[ 4844.835193] server rdma write complete 
+[ 4844.835195] server posted go ahead
+[ 4844.835201] send completion
+[ 4844.843364] recv completion
+[ 4844.843366] Received rkey 40560 addr 11941bc000 len 8193 from peer
+[ 4844.843376] server received sink adv
+[ 4844.843379] krping: post_inv = 1, reg_mr new rkey 0x105bf pgsz 4096 len 8193 iova_start fd070000
+[ 4844.843382] server posted rdma read req 
+[ 4844.843389] rdma read completion
+[ 4844.843399] server received read complete
+[ 4844.843408] compression complete
+[ 4844.843410] krping: post_inv = 0, reg_mr new rkey 0x105c0 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.843413] rdma write from lkey 105c0 laddr fd070000 len 8193
+[ 4844.843420] rdma write completion
+[ 4844.843429] server rdma write complete 
+[ 4844.843431] server posted go ahead
+[ 4844.843436] send completion
+[ 4844.850746] recv completion
+[ 4844.850748] Received rkey 40561 addr 11941bc000 len 8193 from peer
+[ 4844.850758] server received sink adv
+[ 4844.850762] krping: post_inv = 1, reg_mr new rkey 0x105c1 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.850765] server posted rdma read req 
+[ 4844.850771] rdma read completion
+[ 4844.850782] server received read complete
+[ 4844.850795] compression complete
+[ 4844.850798] krping: post_inv = 0, reg_mr new rkey 0x105c2 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.850800] rdma write from lkey 105c2 laddr fd070000 len 8193
+[ 4844.850807] rdma write completion
+[ 4844.850816] server rdma write complete 
+[ 4844.850818] server posted go ahead
+[ 4844.850824] send completion
+[ 4844.859744] recv completion
+[ 4844.859746] Received rkey 40562 addr 11941bc000 len 8193 from peer
+[ 4844.859756] server received sink adv
+[ 4844.859759] krping: post_inv = 1, reg_mr new rkey 0x105c3 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.859762] server posted rdma read req 
+[ 4844.859769] rdma read completion
+[ 4844.859778] server received read complete
+[ 4844.859794] compression complete
+[ 4844.859796] krping: post_inv = 0, reg_mr new rkey 0x105c4 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.859798] rdma write from lkey 105c4 laddr fd070000 len 8193
+[ 4844.859805] rdma write completion
+[ 4844.859814] server rdma write complete 
+[ 4844.859815] server posted go ahead
+[ 4844.859822] send completion
+[ 4844.868740] recv completion
+[ 4844.868742] Received rkey 40563 addr 11941bc000 len 8193 from peer
+[ 4844.868753] server received sink adv
+[ 4844.868756] krping: post_inv = 1, reg_mr new rkey 0x105c5 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.868759] server posted rdma read req 
+[ 4844.868767] rdma read completion
+[ 4844.868776] server received read complete
+[ 4844.868788] compression complete
+[ 4844.868790] krping: post_inv = 0, reg_mr new rkey 0x105c6 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.868793] rdma write from lkey 105c6 laddr fd070000 len 8193
+[ 4844.868801] rdma write completion
+[ 4844.868809] server rdma write complete 
+[ 4844.868811] server posted go ahead
+[ 4844.868817] send completion
+[ 4844.877735] recv completion
+[ 4844.877738] Received rkey 40564 addr 11941bc000 len 8193 from peer
+[ 4844.877747] server received sink adv
+[ 4844.877751] krping: post_inv = 1, reg_mr new rkey 0x105c7 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.877754] server posted rdma read req 
+[ 4844.877760] rdma read completion
+[ 4844.877772] server received read complete
+[ 4844.877782] compression complete
+[ 4844.877784] krping: post_inv = 0, reg_mr new rkey 0x105c8 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.877786] rdma write from lkey 105c8 laddr fd070000 len 8193
+[ 4844.877796] rdma write completion
+[ 4844.877804] server rdma write complete 
+[ 4844.877806] server posted go ahead
+[ 4844.877812] send completion
+[ 4844.886721] recv completion
+[ 4844.886723] Received rkey 40565 addr 11941bc000 len 8193 from peer
+[ 4844.886734] server received sink adv
+[ 4844.886736] krping: post_inv = 1, reg_mr new rkey 0x105c9 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.886739] server posted rdma read req 
+[ 4844.886746] rdma read completion
+[ 4844.886756] server received read complete
+[ 4844.886765] compression complete
+[ 4844.886767] krping: post_inv = 0, reg_mr new rkey 0x105ca pgsz 4096 len 8193 iova_start fd070000
+[ 4844.886769] rdma write from lkey 105ca laddr fd070000 len 8193
+[ 4844.886779] rdma write completion
+[ 4844.886788] server rdma write complete 
+[ 4844.886790] server posted go ahead
+[ 4844.886795] send completion
+[ 4844.895673] recv completion
+[ 4844.895675] Received rkey 40566 addr 11941bc000 len 8193 from peer
+[ 4844.895685] server received sink adv
+[ 4844.895689] krping: post_inv = 1, reg_mr new rkey 0x105cb pgsz 4096 len 8193 iova_start fd070000
+[ 4844.895691] server posted rdma read req 
+[ 4844.895698] rdma read completion
+[ 4844.895709] server received read complete
+[ 4844.895718] compression complete
+[ 4844.895720] krping: post_inv = 0, reg_mr new rkey 0x105cc pgsz 4096 len 8193 iova_start fd070000
+[ 4844.895722] rdma write from lkey 105cc laddr fd070000 len 8193
+[ 4844.895730] rdma write completion
+[ 4844.895739] server rdma write complete 
+[ 4844.895741] server posted go ahead
+[ 4844.895747] send completion
+[ 4844.904424] recv completion
+[ 4844.904427] Received rkey 40567 addr 11941bc000 len 8193 from peer
+[ 4844.904437] server received sink adv
+[ 4844.904440] krping: post_inv = 1, reg_mr new rkey 0x105cd pgsz 4096 len 8193 iova_start fd070000
+[ 4844.904443] server posted rdma read req 
+[ 4844.904451] rdma read completion
+[ 4844.904461] server received read complete
+[ 4844.904479] compression complete
+[ 4844.904481] krping: post_inv = 0, reg_mr new rkey 0x105ce pgsz 4096 len 8193 iova_start fd070000
+[ 4844.904484] rdma write from lkey 105ce laddr fd070000 len 8193
+[ 4844.904491] rdma write completion
+[ 4844.904501] server rdma write complete 
+[ 4844.904503] server posted go ahead
+[ 4844.904508] send completion
+[ 4844.909330] recv completion
+[ 4844.909333] Received rkey 40568 addr 11941bc000 len 8193 from peer
+[ 4844.909342] server received sink adv
+[ 4844.909345] krping: post_inv = 1, reg_mr new rkey 0x105cf pgsz 4096 len 8193 iova_start fd070000
+[ 4844.909348] server posted rdma read req 
+[ 4844.909355] rdma read completion
+[ 4844.909367] server received read complete
+[ 4844.909385] compression complete
+[ 4844.909387] krping: post_inv = 0, reg_mr new rkey 0x105d0 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.909389] rdma write from lkey 105d0 laddr fd070000 len 8193
+[ 4844.909398] rdma write completion
+[ 4844.909407] server rdma write complete 
+[ 4844.909409] server posted go ahead
+[ 4844.909415] send completion
+[ 4844.918215] recv completion
+[ 4844.918217] Received rkey 40569 addr 11941bc000 len 8193 from peer
+[ 4844.918228] server received sink adv
+[ 4844.918231] krping: post_inv = 1, reg_mr new rkey 0x105d1 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.918234] server posted rdma read req 
+[ 4844.918241] rdma read completion
+[ 4844.918250] server received read complete
+[ 4844.918264] compression complete
+[ 4844.918266] krping: post_inv = 0, reg_mr new rkey 0x105d2 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.918268] rdma write from lkey 105d2 laddr fd070000 len 8193
+[ 4844.918275] rdma write completion
+[ 4844.918284] server rdma write complete 
+[ 4844.918286] server posted go ahead
+[ 4844.918291] send completion
+[ 4844.925671] recv completion
+[ 4844.925674] Received rkey 4056a addr 11941bc000 len 8193 from peer
+[ 4844.925683] server received sink adv
+[ 4844.925686] krping: post_inv = 1, reg_mr new rkey 0x105d3 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.925689] server posted rdma read req 
+[ 4844.925698] rdma read completion
+[ 4844.925708] server received read complete
+[ 4844.925730] compression complete
+[ 4844.925732] krping: post_inv = 0, reg_mr new rkey 0x105d4 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.925735] rdma write from lkey 105d4 laddr fd070000 len 8193
+[ 4844.925743] rdma write completion
+[ 4844.925752] server rdma write complete 
+[ 4844.925754] server posted go ahead
+[ 4844.925759] send completion
+[ 4844.933989] recv completion
+[ 4844.933992] Received rkey 4056b addr 11941bc000 len 8193 from peer
+[ 4844.934002] server received sink adv
+[ 4844.934005] krping: post_inv = 1, reg_mr new rkey 0x105d5 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.934008] server posted rdma read req 
+[ 4844.934014] rdma read completion
+[ 4844.934026] server received read complete
+[ 4844.934053] compression complete
+[ 4844.934055] krping: post_inv = 0, reg_mr new rkey 0x105d6 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.934057] rdma write from lkey 105d6 laddr fd070000 len 8193
+[ 4844.934066] rdma write completion
+[ 4844.934076] server rdma write complete 
+[ 4844.934078] server posted go ahead
+[ 4844.934083] send completion
+[ 4844.939672] recv completion
+[ 4844.939674] Received rkey 4056c addr 11941bc000 len 8193 from peer
+[ 4844.939684] server received sink adv
+[ 4844.939686] krping: post_inv = 1, reg_mr new rkey 0x105d7 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.939689] server posted rdma read req 
+[ 4844.939697] rdma read completion
+[ 4844.939707] server received read complete
+[ 4844.939735] compression complete
+[ 4844.939737] krping: post_inv = 0, reg_mr new rkey 0x105d8 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.939739] rdma write from lkey 105d8 laddr fd070000 len 8193
+[ 4844.939747] rdma write completion
+[ 4844.939755] server rdma write complete 
+[ 4844.939758] server posted go ahead
+[ 4844.939763] send completion
+[ 4844.946067] recv completion
+[ 4844.946070] Received rkey 4056d addr 11941bc000 len 8193 from peer
+[ 4844.946082] server received sink adv
+[ 4844.946085] krping: post_inv = 1, reg_mr new rkey 0x105d9 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.946088] server posted rdma read req 
+[ 4844.946095] rdma read completion
+[ 4844.946106] server received read complete
+[ 4844.946125] compression complete
+[ 4844.946128] krping: post_inv = 0, reg_mr new rkey 0x105da pgsz 4096 len 8193 iova_start fd070000
+[ 4844.946130] rdma write from lkey 105da laddr fd070000 len 8193
+[ 4844.946138] rdma write completion
+[ 4844.946146] server rdma write complete 
+[ 4844.946149] server posted go ahead
+[ 4844.946154] send completion
+[ 4844.952038] recv completion
+[ 4844.952040] Received rkey 4056e addr 11941bc000 len 8193 from peer
+[ 4844.952050] server received sink adv
+[ 4844.952053] krping: post_inv = 1, reg_mr new rkey 0x105db pgsz 4096 len 8193 iova_start fd070000
+[ 4844.952056] server posted rdma read req 
+[ 4844.952064] rdma read completion
+[ 4844.952074] server received read complete
+[ 4844.952097] compression complete
+[ 4844.952099] krping: post_inv = 0, reg_mr new rkey 0x105dc pgsz 4096 len 8193 iova_start fd070000
+[ 4844.952102] rdma write from lkey 105dc laddr fd070000 len 8193
+[ 4844.952110] rdma write completion
+[ 4844.952119] server rdma write complete 
+[ 4844.952121] server posted go ahead
+[ 4844.952127] send completion
+[ 4844.959989] recv completion
+[ 4844.959992] Received rkey 4056f addr 11941bc000 len 8193 from peer
+[ 4844.960002] server received sink adv
+[ 4844.960005] krping: post_inv = 1, reg_mr new rkey 0x105dd pgsz 4096 len 8193 iova_start fd070000
+[ 4844.960008] server posted rdma read req 
+[ 4844.960015] rdma read completion
+[ 4844.960024] server received read complete
+[ 4844.960043] compression complete
+[ 4844.960045] krping: post_inv = 0, reg_mr new rkey 0x105de pgsz 4096 len 8193 iova_start fd070000
+[ 4844.960047] rdma write from lkey 105de laddr fd070000 len 8193
+[ 4844.960055] rdma write completion
+[ 4844.960064] server rdma write complete 
+[ 4844.960066] server posted go ahead
+[ 4844.960072] send completion
+[ 4844.967254] recv completion
+[ 4844.967256] Received rkey 40570 addr 11941bc000 len 8193 from peer
+[ 4844.967267] server received sink adv
+[ 4844.967270] krping: post_inv = 1, reg_mr new rkey 0x105df pgsz 4096 len 8193 iova_start fd070000
+[ 4844.967273] server posted rdma read req 
+[ 4844.967282] rdma read completion
+[ 4844.967292] server received read complete
+[ 4844.967313] compression complete
+[ 4844.967315] krping: post_inv = 0, reg_mr new rkey 0x105e0 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.967318] rdma write from lkey 105e0 laddr fd070000 len 8193
+[ 4844.967325] rdma write completion
+[ 4844.967334] server rdma write complete 
+[ 4844.967337] server posted go ahead
+[ 4844.967342] send completion
+[ 4844.971543] recv completion
+[ 4844.971545] Received rkey 40571 addr 11941bc000 len 8193 from peer
+[ 4844.971556] server received sink adv
+[ 4844.971558] krping: post_inv = 1, reg_mr new rkey 0x105e1 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.971562] server posted rdma read req 
+[ 4844.971569] rdma read completion
+[ 4844.971579] server received read complete
+[ 4844.971600] compression complete
+[ 4844.971602] krping: post_inv = 0, reg_mr new rkey 0x105e2 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.971604] rdma write from lkey 105e2 laddr fd070000 len 8193
+[ 4844.971611] rdma write completion
+[ 4844.971621] server rdma write complete 
+[ 4844.971625] server posted go ahead
+[ 4844.971630] send completion
+[ 4844.976882] recv completion
+[ 4844.976885] Received rkey 40572 addr 11941bc000 len 8193 from peer
+[ 4844.976895] server received sink adv
+[ 4844.976900] krping: post_inv = 1, reg_mr new rkey 0x105e3 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.976904] server posted rdma read req 
+[ 4844.976913] rdma read completion
+[ 4844.976922] server received read complete
+[ 4844.976932] compression complete
+[ 4844.976934] krping: post_inv = 0, reg_mr new rkey 0x105e4 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.976936] rdma write from lkey 105e4 laddr fd070000 len 8193
+[ 4844.976944] rdma write completion
+[ 4844.976953] server rdma write complete 
+[ 4844.976955] server posted go ahead
+[ 4844.976960] send completion
+[ 4844.983716] recv completion
+[ 4844.983719] Received rkey 40573 addr 11941bc000 len 8193 from peer
+[ 4844.983729] server received sink adv
+[ 4844.983732] krping: post_inv = 1, reg_mr new rkey 0x105e5 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.983735] server posted rdma read req 
+[ 4844.983744] rdma read completion
+[ 4844.983753] server received read complete
+[ 4844.983761] compression complete
+[ 4844.983763] krping: post_inv = 0, reg_mr new rkey 0x105e6 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.983766] rdma write from lkey 105e6 laddr fd070000 len 8193
+[ 4844.983774] rdma write completion
+[ 4844.983783] server rdma write complete 
+[ 4844.983785] server posted go ahead
+[ 4844.983791] send completion
+[ 4844.991104] recv completion
+[ 4844.991107] Received rkey 40574 addr 11941bc000 len 8193 from peer
+[ 4844.991117] server received sink adv
+[ 4844.991120] krping: post_inv = 1, reg_mr new rkey 0x105e7 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.991123] server posted rdma read req 
+[ 4844.991130] rdma read completion
+[ 4844.991141] server received read complete
+[ 4844.991161] compression complete
+[ 4844.991163] krping: post_inv = 0, reg_mr new rkey 0x105e8 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.991166] rdma write from lkey 105e8 laddr fd070000 len 8193
+[ 4844.991174] rdma write completion
+[ 4844.991182] server rdma write complete 
+[ 4844.991185] server posted go ahead
+[ 4844.991190] send completion
+[ 4844.997961] recv completion
+[ 4844.997963] Received rkey 40575 addr 11941bc000 len 8193 from peer
+[ 4844.997974] server received sink adv
+[ 4844.997977] krping: post_inv = 1, reg_mr new rkey 0x105e9 pgsz 4096 len 8193 iova_start fd070000
+[ 4844.997980] server posted rdma read req 
+[ 4844.997987] rdma read completion
+[ 4844.997997] server received read complete
+[ 4844.998018] compression complete
+[ 4844.998019] krping: post_inv = 0, reg_mr new rkey 0x105ea pgsz 4096 len 8193 iova_start fd070000
+[ 4844.998022] rdma write from lkey 105ea laddr fd070000 len 8193
+[ 4844.998029] rdma write completion
+[ 4844.998038] server rdma write complete 
+[ 4844.998040] server posted go ahead
+[ 4844.998045] send completion
+[ 4845.005367] recv completion
+[ 4845.005369] Received rkey 40576 addr 11941bc000 len 8193 from peer
+[ 4845.005378] server received sink adv
+[ 4845.005382] krping: post_inv = 1, reg_mr new rkey 0x105eb pgsz 4096 len 8193 iova_start fd070000
+[ 4845.005385] server posted rdma read req 
+[ 4845.005392] rdma read completion
+[ 4845.005402] server received read complete
+[ 4845.005420] compression complete
+[ 4845.005422] krping: post_inv = 0, reg_mr new rkey 0x105ec pgsz 4096 len 8193 iova_start fd070000
+[ 4845.005424] rdma write from lkey 105ec laddr fd070000 len 8193
+[ 4845.005432] rdma write completion
+[ 4845.005441] server rdma write complete 
+[ 4845.005442] server posted go ahead
+[ 4845.005448] send completion
+[ 4845.013158] recv completion
+[ 4845.013160] Received rkey 40577 addr 11941bc000 len 8193 from peer
+[ 4845.013171] server received sink adv
+[ 4845.013174] krping: post_inv = 1, reg_mr new rkey 0x105ed pgsz 4096 len 8193 iova_start fd070000
+[ 4845.013178] server posted rdma read req 
+[ 4845.013186] rdma read completion
+[ 4845.013195] server received read complete
+[ 4845.013215] compression complete
+[ 4845.013217] krping: post_inv = 0, reg_mr new rkey 0x105ee pgsz 4096 len 8193 iova_start fd070000
+[ 4845.013220] rdma write from lkey 105ee laddr fd070000 len 8193
+[ 4845.013228] rdma write completion
+[ 4845.013237] server rdma write complete 
+[ 4845.013239] server posted go ahead
+[ 4845.013244] send completion
+[ 4845.020261] recv completion
+[ 4845.020263] Received rkey 40578 addr 11941bc000 len 8193 from peer
+[ 4845.020273] server received sink adv
+[ 4845.020275] krping: post_inv = 1, reg_mr new rkey 0x105ef pgsz 4096 len 8193 iova_start fd070000
+[ 4845.020278] server posted rdma read req 
+[ 4845.020285] rdma read completion
+[ 4845.020296] server received read complete
+[ 4845.020316] compression complete
+[ 4845.020318] krping: post_inv = 0, reg_mr new rkey 0x105f0 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.020320] rdma write from lkey 105f0 laddr fd070000 len 8193
+[ 4845.020328] rdma write completion
+[ 4845.020336] server rdma write complete 
+[ 4845.020340] server posted go ahead
+[ 4845.020345] send completion
+[ 4845.026648] recv completion
+[ 4845.026651] Received rkey 40579 addr 11941bc000 len 8193 from peer
+[ 4845.026661] server received sink adv
+[ 4845.026664] krping: post_inv = 1, reg_mr new rkey 0x105f1 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.026667] server posted rdma read req 
+[ 4845.026674] rdma read completion
+[ 4845.026685] server received read complete
+[ 4845.026704] compression complete
+[ 4845.026706] krping: post_inv = 0, reg_mr new rkey 0x105f2 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.026708] rdma write from lkey 105f2 laddr fd070000 len 8193
+[ 4845.026715] rdma write completion
+[ 4845.026724] server rdma write complete 
+[ 4845.026726] server posted go ahead
+[ 4845.026732] send completion
+[ 4845.033468] recv completion
+[ 4845.033470] Received rkey 4057a addr 11941bc000 len 8193 from peer
+[ 4845.033481] server received sink adv
+[ 4845.033484] krping: post_inv = 1, reg_mr new rkey 0x105f3 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.033488] server posted rdma read req 
+[ 4845.033496] rdma read completion
+[ 4845.033506] server received read complete
+[ 4845.033533] compression complete
+[ 4845.033535] krping: post_inv = 0, reg_mr new rkey 0x105f4 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.033537] rdma write from lkey 105f4 laddr fd070000 len 8193
+[ 4845.033545] rdma write completion
+[ 4845.033555] server rdma write complete 
+[ 4845.033557] server posted go ahead
+[ 4845.033562] send completion
+[ 4845.041562] recv completion
+[ 4845.041564] Received rkey 4057b addr 11941bc000 len 8193 from peer
+[ 4845.041575] server received sink adv
+[ 4845.041578] krping: post_inv = 1, reg_mr new rkey 0x105f5 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.041581] server posted rdma read req 
+[ 4845.041589] rdma read completion
+[ 4845.041598] server received read complete
+[ 4845.041628] compression complete
+[ 4845.041630] krping: post_inv = 0, reg_mr new rkey 0x105f6 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.041632] rdma write from lkey 105f6 laddr fd070000 len 8193
+[ 4845.041640] rdma write completion
+[ 4845.041649] server rdma write complete 
+[ 4845.041653] server posted go ahead
+[ 4845.041658] send completion
+[ 4845.049988] recv completion
+[ 4845.049990] Received rkey 4057c addr 11941bc000 len 8193 from peer
+[ 4845.050001] server received sink adv
+[ 4845.050004] krping: post_inv = 1, reg_mr new rkey 0x105f7 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.050007] server posted rdma read req 
+[ 4845.050016] rdma read completion
+[ 4845.050026] server received read complete
+[ 4845.050046] compression complete
+[ 4845.050048] krping: post_inv = 0, reg_mr new rkey 0x105f8 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.050050] rdma write from lkey 105f8 laddr fd070000 len 8193
+[ 4845.050058] rdma write completion
+[ 4845.050067] server rdma write complete 
+[ 4845.050069] server posted go ahead
+[ 4845.050075] send completion
+[ 4845.056132] recv completion
+[ 4845.056135] Received rkey 4057d addr 11941bc000 len 8193 from peer
+[ 4845.056145] server received sink adv
+[ 4845.056148] krping: post_inv = 1, reg_mr new rkey 0x105f9 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.056151] server posted rdma read req 
+[ 4845.056160] rdma read completion
+[ 4845.056169] server received read complete
+[ 4845.056187] compression complete
+[ 4845.056189] krping: post_inv = 0, reg_mr new rkey 0x105fa pgsz 4096 len 8193 iova_start fd070000
+[ 4845.056191] rdma write from lkey 105fa laddr fd070000 len 8193
+[ 4845.056200] rdma write completion
+[ 4845.056209] server rdma write complete 
+[ 4845.056211] server posted go ahead
+[ 4845.056217] send completion
+[ 4845.063082] recv completion
+[ 4845.063085] Received rkey 4057e addr 11941bc000 len 8193 from peer
+[ 4845.063094] server received sink adv
+[ 4845.063097] krping: post_inv = 1, reg_mr new rkey 0x105fb pgsz 4096 len 8193 iova_start fd070000
+[ 4845.063099] server posted rdma read req 
+[ 4845.063107] rdma read completion
+[ 4845.063116] server received read complete
+[ 4845.063144] compression complete
+[ 4845.063146] krping: post_inv = 0, reg_mr new rkey 0x105fc pgsz 4096 len 8193 iova_start fd070000
+[ 4845.063148] rdma write from lkey 105fc laddr fd070000 len 8193
+[ 4845.063157] rdma write completion
+[ 4845.063166] server rdma write complete 
+[ 4845.063168] server posted go ahead
+[ 4845.063173] send completion
+[ 4845.071539] recv completion
+[ 4845.071541] Received rkey 4057f addr 11941bc000 len 8193 from peer
+[ 4845.071551] server received sink adv
+[ 4845.071555] krping: post_inv = 1, reg_mr new rkey 0x105fd pgsz 4096 len 8193 iova_start fd070000
+[ 4845.071559] server posted rdma read req 
+[ 4845.071566] rdma read completion
+[ 4845.071576] server received read complete
+[ 4845.071604] compression complete
+[ 4845.071606] krping: post_inv = 0, reg_mr new rkey 0x105fe pgsz 4096 len 8193 iova_start fd070000
+[ 4845.071608] rdma write from lkey 105fe laddr fd070000 len 8193
+[ 4845.071616] rdma write completion
+[ 4845.071626] server rdma write complete 
+[ 4845.071629] server posted go ahead
+[ 4845.071634] send completion
+[ 4845.080094] recv completion
+[ 4845.080096] Received rkey 40580 addr 11941bc000 len 8193 from peer
+[ 4845.080107] server received sink adv
+[ 4845.080109] krping: post_inv = 1, reg_mr new rkey 0x105ff pgsz 4096 len 8193 iova_start fd070000
+[ 4845.080112] server posted rdma read req 
+[ 4845.080119] rdma read completion
+[ 4845.080129] server received read complete
+[ 4845.080154] compression complete
+[ 4845.080156] krping: post_inv = 0, reg_mr new rkey 0x10500 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.080158] rdma write from lkey 10500 laddr fd070000 len 8193
+[ 4845.080166] rdma write completion
+[ 4845.080177] server rdma write complete 
+[ 4845.080179] server posted go ahead
+[ 4845.080184] send completion
+[ 4845.086250] recv completion
+[ 4845.086252] Received rkey 40581 addr 11941bc000 len 8193 from peer
+[ 4845.086262] server received sink adv
+[ 4845.086265] krping: post_inv = 1, reg_mr new rkey 0x10501 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.086268] server posted rdma read req 
+[ 4845.086276] rdma read completion
+[ 4845.086286] server received read complete
+[ 4845.086313] compression complete
+[ 4845.086315] krping: post_inv = 0, reg_mr new rkey 0x10502 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.086317] rdma write from lkey 10502 laddr fd070000 len 8193
+[ 4845.086325] rdma write completion
+[ 4845.086333] server rdma write complete 
+[ 4845.086335] server posted go ahead
+[ 4845.086342] send completion
+[ 4845.093996] recv completion
+[ 4845.093998] Received rkey 40582 addr 11941bc000 len 8193 from peer
+[ 4845.094010] server received sink adv
+[ 4845.094013] krping: post_inv = 1, reg_mr new rkey 0x10503 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.094016] server posted rdma read req 
+[ 4845.094022] rdma read completion
+[ 4845.094034] server received read complete
+[ 4845.094061] compression complete
+[ 4845.094063] krping: post_inv = 0, reg_mr new rkey 0x10504 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.094065] rdma write from lkey 10504 laddr fd070000 len 8193
+[ 4845.094075] rdma write completion
+[ 4845.094083] server rdma write complete 
+[ 4845.094085] server posted go ahead
+[ 4845.094092] send completion
+[ 4845.099128] recv completion
+[ 4845.099131] Received rkey 40583 addr 11941bc000 len 8193 from peer
+[ 4845.099142] server received sink adv
+[ 4845.099144] krping: post_inv = 1, reg_mr new rkey 0x10505 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.099147] server posted rdma read req 
+[ 4845.099154] rdma read completion
+[ 4845.099163] server received read complete
+[ 4845.099181] compression complete
+[ 4845.099183] krping: post_inv = 0, reg_mr new rkey 0x10506 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.099186] rdma write from lkey 10506 laddr fd070000 len 8193
+[ 4845.099193] rdma write completion
+[ 4845.099202] server rdma write complete 
+[ 4845.099204] server posted go ahead
+[ 4845.099209] send completion
+[ 4845.104208] recv completion
+[ 4845.104210] Received rkey 40584 addr 11941bc000 len 8193 from peer
+[ 4845.104221] server received sink adv
+[ 4845.104224] krping: post_inv = 1, reg_mr new rkey 0x10507 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.104227] server posted rdma read req 
+[ 4845.104235] rdma read completion
+[ 4845.104244] server received read complete
+[ 4845.104261] compression complete
+[ 4845.104263] krping: post_inv = 0, reg_mr new rkey 0x10508 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.104265] rdma write from lkey 10508 laddr fd070000 len 8193
+[ 4845.104275] rdma write completion
+[ 4845.104284] server rdma write complete 
+[ 4845.104286] server posted go ahead
+[ 4845.104291] send completion
+[ 4845.110539] recv completion
+[ 4845.110542] Received rkey 40585 addr 11941bc000 len 8193 from peer
+[ 4845.110552] server received sink adv
+[ 4845.110555] krping: post_inv = 1, reg_mr new rkey 0x10509 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.110557] server posted rdma read req 
+[ 4845.110565] rdma read completion
+[ 4845.110575] server received read complete
+[ 4845.110600] compression complete
+[ 4845.110604] krping: post_inv = 0, reg_mr new rkey 0x1050a pgsz 4096 len 8193 iova_start fd070000
+[ 4845.110607] rdma write from lkey 1050a laddr fd070000 len 8193
+[ 4845.110614] rdma write completion
+[ 4845.110623] server rdma write complete 
+[ 4845.110625] server posted go ahead
+[ 4845.110631] send completion
+[ 4845.117839] recv completion
+[ 4845.117841] Received rkey 40586 addr 11941bc000 len 8193 from peer
+[ 4845.117852] server received sink adv
+[ 4845.117855] krping: post_inv = 1, reg_mr new rkey 0x1050b pgsz 4096 len 8193 iova_start fd070000
+[ 4845.117857] server posted rdma read req 
+[ 4845.117865] rdma read completion
+[ 4845.117875] server received read complete
+[ 4845.117903] compression complete
+[ 4845.117905] krping: post_inv = 0, reg_mr new rkey 0x1050c pgsz 4096 len 8193 iova_start fd070000
+[ 4845.117909] rdma write from lkey 1050c laddr fd070000 len 8193
+[ 4845.117917] rdma write completion
+[ 4845.117926] server rdma write complete 
+[ 4845.117929] server posted go ahead
+[ 4845.117934] send completion
+[ 4845.124486] recv completion
+[ 4845.124488] Received rkey 40587 addr 11941bc000 len 8193 from peer
+[ 4845.124498] server received sink adv
+[ 4845.124501] krping: post_inv = 1, reg_mr new rkey 0x1050d pgsz 4096 len 8193 iova_start fd070000
+[ 4845.124504] server posted rdma read req 
+[ 4845.124512] rdma read completion
+[ 4845.124522] server received read complete
+[ 4845.124540] compression complete
+[ 4845.124542] krping: post_inv = 0, reg_mr new rkey 0x1050e pgsz 4096 len 8193 iova_start fd070000
+[ 4845.124544] rdma write from lkey 1050e laddr fd070000 len 8193
+[ 4845.124552] rdma write completion
+[ 4845.124561] server rdma write complete 
+[ 4845.124563] server posted go ahead
+[ 4845.124568] send completion
+[ 4845.132095] recv completion
+[ 4845.132097] Received rkey 40588 addr 11941bc000 len 8193 from peer
+[ 4845.132108] server received sink adv
+[ 4845.132110] krping: post_inv = 1, reg_mr new rkey 0x1050f pgsz 4096 len 8193 iova_start fd070000
+[ 4845.132113] server posted rdma read req 
+[ 4845.132120] rdma read completion
+[ 4845.132132] server received read complete
+[ 4845.132150] compression complete
+[ 4845.132152] krping: post_inv = 0, reg_mr new rkey 0x10510 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.132154] rdma write from lkey 10510 laddr fd070000 len 8193
+[ 4845.132162] rdma write completion
+[ 4845.132171] server rdma write complete 
+[ 4845.132173] server posted go ahead
+[ 4845.132179] send completion
+[ 4845.138540] recv completion
+[ 4845.138542] Received rkey 40589 addr 11941bc000 len 8193 from peer
+[ 4845.138552] server received sink adv
+[ 4845.138555] krping: post_inv = 1, reg_mr new rkey 0x10511 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.138557] server posted rdma read req 
+[ 4845.138566] rdma read completion
+[ 4845.138575] server received read complete
+[ 4845.138594] compression complete
+[ 4845.138596] krping: post_inv = 0, reg_mr new rkey 0x10512 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.138599] rdma write from lkey 10512 laddr fd070000 len 8193
+[ 4845.138606] rdma write completion
+[ 4845.138615] server rdma write complete 
+[ 4845.138617] server posted go ahead
+[ 4845.138623] send completion
+[ 4845.147452] recv completion
+[ 4845.147454] Received rkey 4058a addr 11941bc000 len 8193 from peer
+[ 4845.147464] server received sink adv
+[ 4845.147467] krping: post_inv = 1, reg_mr new rkey 0x10513 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.147470] server posted rdma read req 
+[ 4845.147477] rdma read completion
+[ 4845.147488] server received read complete
+[ 4845.147506] compression complete
+[ 4845.147508] krping: post_inv = 0, reg_mr new rkey 0x10514 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.147511] rdma write from lkey 10514 laddr fd070000 len 8193
+[ 4845.147519] rdma write completion
+[ 4845.147528] server rdma write complete 
+[ 4845.147530] server posted go ahead
+[ 4845.147536] send completion
+[ 4845.156484] recv completion
+[ 4845.156486] Received rkey 4058b addr 11941bc000 len 8193 from peer
+[ 4845.156496] server received sink adv
+[ 4845.156499] krping: post_inv = 1, reg_mr new rkey 0x10515 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.156502] server posted rdma read req 
+[ 4845.156509] rdma read completion
+[ 4845.156520] server received read complete
+[ 4845.156529] compression complete
+[ 4845.156531] krping: post_inv = 0, reg_mr new rkey 0x10516 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.156533] rdma write from lkey 10516 laddr fd070000 len 8193
+[ 4845.156540] rdma write completion
+[ 4845.156549] server rdma write complete 
+[ 4845.156551] server posted go ahead
+[ 4845.156556] send completion
+[ 4845.165474] recv completion
+[ 4845.165476] Received rkey 4058c addr 11941bc000 len 8193 from peer
+[ 4845.165487] server received sink adv
+[ 4845.165490] krping: post_inv = 1, reg_mr new rkey 0x10517 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.165493] server posted rdma read req 
+[ 4845.165500] rdma read completion
+[ 4845.165509] server received read complete
+[ 4845.165532] compression complete
+[ 4845.165534] krping: post_inv = 0, reg_mr new rkey 0x10518 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.165537] rdma write from lkey 10518 laddr fd070000 len 8193
+[ 4845.165544] rdma write completion
+[ 4845.165555] server rdma write complete 
+[ 4845.165557] server posted go ahead
+[ 4845.165562] send completion
+[ 4845.173170] recv completion
+[ 4845.173172] Received rkey 4058d addr 11941bc000 len 8193 from peer
+[ 4845.173182] server received sink adv
+[ 4845.173184] krping: post_inv = 1, reg_mr new rkey 0x10519 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.173187] server posted rdma read req 
+[ 4845.173195] rdma read completion
+[ 4845.173204] server received read complete
+[ 4845.173222] compression complete
+[ 4845.173224] krping: post_inv = 0, reg_mr new rkey 0x1051a pgsz 4096 len 8193 iova_start fd070000
+[ 4845.173227] rdma write from lkey 1051a laddr fd070000 len 8193
+[ 4845.173234] rdma write completion
+[ 4845.173243] server rdma write complete 
+[ 4845.173245] server posted go ahead
+[ 4845.173250] send completion
+[ 4845.179568] recv completion
+[ 4845.179570] Received rkey 4058e addr 11941bc000 len 8193 from peer
+[ 4845.179580] server received sink adv
+[ 4845.179582] krping: post_inv = 1, reg_mr new rkey 0x1051b pgsz 4096 len 8193 iova_start fd070000
+[ 4845.179585] server posted rdma read req 
+[ 4845.179592] rdma read completion
+[ 4845.179602] server received read complete
+[ 4845.179621] compression complete
+[ 4845.179623] krping: post_inv = 0, reg_mr new rkey 0x1051c pgsz 4096 len 8193 iova_start fd070000
+[ 4845.179626] rdma write from lkey 1051c laddr fd070000 len 8193
+[ 4845.179634] rdma write completion
+[ 4845.179643] server rdma write complete 
+[ 4845.179645] server posted go ahead
+[ 4845.179650] send completion
+[ 4845.186945] recv completion
+[ 4845.186947] Received rkey 4058f addr 11941bc000 len 8193 from peer
+[ 4845.186958] server received sink adv
+[ 4845.186961] krping: post_inv = 1, reg_mr new rkey 0x1051d pgsz 4096 len 8193 iova_start fd070000
+[ 4845.186964] server posted rdma read req 
+[ 4845.186971] rdma read completion
+[ 4845.186982] server received read complete
+[ 4845.187000] compression complete
+[ 4845.187002] krping: post_inv = 0, reg_mr new rkey 0x1051e pgsz 4096 len 8193 iova_start fd070000
+[ 4845.187004] rdma write from lkey 1051e laddr fd070000 len 8193
+[ 4845.187013] rdma write completion
+[ 4845.187022] server rdma write complete 
+[ 4845.187025] server posted go ahead
+[ 4845.187029] send completion
+[ 4845.194757] recv completion
+[ 4845.194759] Received rkey 40590 addr 11941bc000 len 8193 from peer
+[ 4845.194769] server received sink adv
+[ 4845.194772] krping: post_inv = 1, reg_mr new rkey 0x1051f pgsz 4096 len 8193 iova_start fd070000
+[ 4845.194775] server posted rdma read req 
+[ 4845.194782] rdma read completion
+[ 4845.194791] server received read complete
+[ 4845.194809] compression complete
+[ 4845.194811] krping: post_inv = 0, reg_mr new rkey 0x10520 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.194813] rdma write from lkey 10520 laddr fd070000 len 8193
+[ 4845.194822] rdma write completion
+[ 4845.194831] server rdma write complete 
+[ 4845.194833] server posted go ahead
+[ 4845.194839] send completion
+[ 4845.201384] recv completion
+[ 4845.201386] Received rkey 40591 addr 11941bc000 len 8193 from peer
+[ 4845.201397] server received sink adv
+[ 4845.201399] krping: post_inv = 1, reg_mr new rkey 0x10521 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.201402] server posted rdma read req 
+[ 4845.201409] rdma read completion
+[ 4845.201419] server received read complete
+[ 4845.201435] compression complete
+[ 4845.201437] krping: post_inv = 0, reg_mr new rkey 0x10522 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.201440] rdma write from lkey 10522 laddr fd070000 len 8193
+[ 4845.201448] rdma write completion
+[ 4845.201457] server rdma write complete 
+[ 4845.201459] server posted go ahead
+[ 4845.201464] send completion
+[ 4845.208727] recv completion
+[ 4845.208729] Received rkey 40592 addr 11941bc000 len 8193 from peer
+[ 4845.208741] server received sink adv
+[ 4845.208743] krping: post_inv = 1, reg_mr new rkey 0x10523 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.208746] server posted rdma read req 
+[ 4845.208753] rdma read completion
+[ 4845.208765] server received read complete
+[ 4845.208783] compression complete
+[ 4845.208785] krping: post_inv = 0, reg_mr new rkey 0x10524 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.208787] rdma write from lkey 10524 laddr fd070000 len 8193
+[ 4845.208796] rdma write completion
+[ 4845.208805] server rdma write complete 
+[ 4845.208807] server posted go ahead
+[ 4845.208812] send completion
+[ 4845.214620] recv completion
+[ 4845.214622] Received rkey 40593 addr 11941bc000 len 8193 from peer
+[ 4845.214632] server received sink adv
+[ 4845.214635] krping: post_inv = 1, reg_mr new rkey 0x10525 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.214638] server posted rdma read req 
+[ 4845.214646] rdma read completion
+[ 4845.214656] server received read complete
+[ 4845.214674] compression complete
+[ 4845.214676] krping: post_inv = 0, reg_mr new rkey 0x10526 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.214679] rdma write from lkey 10526 laddr fd070000 len 8193
+[ 4845.214686] rdma write completion
+[ 4845.214695] server rdma write complete 
+[ 4845.214698] server posted go ahead
+[ 4845.214703] send completion
+[ 4845.222315] recv completion
+[ 4845.222317] Received rkey 40594 addr 11941bc000 len 8193 from peer
+[ 4845.222329] server received sink adv
+[ 4845.222332] krping: post_inv = 1, reg_mr new rkey 0x10527 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.222335] server posted rdma read req 
+[ 4845.222342] rdma read completion
+[ 4845.222352] server received read complete
+[ 4845.222368] compression complete
+[ 4845.222371] krping: post_inv = 0, reg_mr new rkey 0x10528 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.222373] rdma write from lkey 10528 laddr fd070000 len 8193
+[ 4845.222381] rdma write completion
+[ 4845.222390] server rdma write complete 
+[ 4845.222392] server posted go ahead
+[ 4845.222398] send completion
+[ 4845.230349] recv completion
+[ 4845.230351] Received rkey 40595 addr 11941bc000 len 8193 from peer
+[ 4845.230363] server received sink adv
+[ 4845.230366] krping: post_inv = 1, reg_mr new rkey 0x10529 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.230369] server posted rdma read req 
+[ 4845.230375] rdma read completion
+[ 4845.230385] server received read complete
+[ 4845.230393] compression complete
+[ 4845.230395] krping: post_inv = 0, reg_mr new rkey 0x1052a pgsz 4096 len 8193 iova_start fd070000
+[ 4845.230397] rdma write from lkey 1052a laddr fd070000 len 8193
+[ 4845.230404] rdma write completion
+[ 4845.230412] server rdma write complete 
+[ 4845.230414] server posted go ahead
+[ 4845.230420] send completion
+[ 4845.239294] recv completion
+[ 4845.239298] Received rkey 40596 addr 11941bc000 len 8193 from peer
+[ 4845.239310] server received sink adv
+[ 4845.239313] krping: post_inv = 1, reg_mr new rkey 0x1052b pgsz 4096 len 8193 iova_start fd070000
+[ 4845.239316] server posted rdma read req 
+[ 4845.239323] rdma read completion
+[ 4845.239334] server received read complete
+[ 4845.239349] compression complete
+[ 4845.239351] krping: post_inv = 0, reg_mr new rkey 0x1052c pgsz 4096 len 8193 iova_start fd070000
+[ 4845.239353] rdma write from lkey 1052c laddr fd070000 len 8193
+[ 4845.239361] rdma write completion
+[ 4845.239369] server rdma write complete 
+[ 4845.239371] server posted go ahead
+[ 4845.239376] send completion
+[ 4845.245408] recv completion
+[ 4845.245410] Received rkey 40597 addr 11941bc000 len 8193 from peer
+[ 4845.245421] server received sink adv
+[ 4845.245424] krping: post_inv = 1, reg_mr new rkey 0x1052d pgsz 4096 len 8193 iova_start fd070000
+[ 4845.245426] server posted rdma read req 
+[ 4845.245436] rdma read completion
+[ 4845.245445] server received read complete
+[ 4845.245457] compression complete
+[ 4845.245459] krping: post_inv = 0, reg_mr new rkey 0x1052e pgsz 4096 len 8193 iova_start fd070000
+[ 4845.245461] rdma write from lkey 1052e laddr fd070000 len 8193
+[ 4845.245469] rdma write completion
+[ 4845.245477] server rdma write complete 
+[ 4845.245479] server posted go ahead
+[ 4845.245484] send completion
+[ 4845.249788] recv completion
+[ 4845.249790] Received rkey 40598 addr 11941bc000 len 8193 from peer
+[ 4845.249801] server received sink adv
+[ 4845.249804] krping: post_inv = 1, reg_mr new rkey 0x1052f pgsz 4096 len 8193 iova_start fd070000
+[ 4845.249806] server posted rdma read req 
+[ 4845.249815] rdma read completion
+[ 4845.249825] server received read complete
+[ 4845.249834] compression complete
+[ 4845.249836] krping: post_inv = 0, reg_mr new rkey 0x10530 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.249838] rdma write from lkey 10530 laddr fd070000 len 8193
+[ 4845.249847] rdma write completion
+[ 4845.249855] server rdma write complete 
+[ 4845.249857] server posted go ahead
+[ 4845.249863] send completion
+[ 4845.255887] recv completion
+[ 4845.255889] Received rkey 40599 addr 11941bc000 len 8193 from peer
+[ 4845.255899] server received sink adv
+[ 4845.255902] krping: post_inv = 1, reg_mr new rkey 0x10531 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.255905] server posted rdma read req 
+[ 4845.255912] rdma read completion
+[ 4845.255922] server received read complete
+[ 4845.255935] compression complete
+[ 4845.255937] krping: post_inv = 0, reg_mr new rkey 0x10532 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.255940] rdma write from lkey 10532 laddr fd070000 len 8193
+[ 4845.255947] rdma write completion
+[ 4845.255956] server rdma write complete 
+[ 4845.255958] server posted go ahead
+[ 4845.255963] send completion
+[ 4845.263551] recv completion
+[ 4845.263554] Received rkey 4059a addr 11941bc000 len 8193 from peer
+[ 4845.263564] server received sink adv
+[ 4845.263567] krping: post_inv = 1, reg_mr new rkey 0x10533 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.263570] server posted rdma read req 
+[ 4845.263577] rdma read completion
+[ 4845.263589] server received read complete
+[ 4845.263608] compression complete
+[ 4845.263610] krping: post_inv = 0, reg_mr new rkey 0x10534 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.263613] rdma write from lkey 10534 laddr fd070000 len 8193
+[ 4845.263622] rdma write completion
+[ 4845.263633] server rdma write complete 
+[ 4845.263635] server posted go ahead
+[ 4845.263640] send completion
+[ 4845.268519] recv completion
+[ 4845.268522] Received rkey 4059b addr 11941bc000 len 8193 from peer
+[ 4845.268531] server received sink adv
+[ 4845.268534] krping: post_inv = 1, reg_mr new rkey 0x10535 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.268536] server posted rdma read req 
+[ 4845.268544] rdma read completion
+[ 4845.268555] server received read complete
+[ 4845.268578] compression complete
+[ 4845.268580] krping: post_inv = 0, reg_mr new rkey 0x10536 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.268582] rdma write from lkey 10536 laddr fd070000 len 8193
+[ 4845.268590] rdma write completion
+[ 4845.268599] server rdma write complete 
+[ 4845.268601] server posted go ahead
+[ 4845.268606] send completion
+[ 4845.273426] recv completion
+[ 4845.273429] Received rkey 4059c addr 11941bc000 len 8193 from peer
+[ 4845.273439] server received sink adv
+[ 4845.273441] krping: post_inv = 1, reg_mr new rkey 0x10537 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.273444] server posted rdma read req 
+[ 4845.273451] rdma read completion
+[ 4845.273461] server received read complete
+[ 4845.273485] compression complete
+[ 4845.273489] krping: post_inv = 0, reg_mr new rkey 0x10538 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.273491] rdma write from lkey 10538 laddr fd070000 len 8193
+[ 4845.273499] rdma write completion
+[ 4845.273513] server rdma write complete 
+[ 4845.273515] server posted go ahead
+[ 4845.273521] send completion
+[ 4845.278877] recv completion
+[ 4845.278879] Received rkey 4059d addr 11941bc000 len 8193 from peer
+[ 4845.278889] server received sink adv
+[ 4845.278892] krping: post_inv = 1, reg_mr new rkey 0x10539 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.278895] server posted rdma read req 
+[ 4845.278902] rdma read completion
+[ 4845.278912] server received read complete
+[ 4845.278928] compression complete
+[ 4845.278930] krping: post_inv = 0, reg_mr new rkey 0x1053a pgsz 4096 len 8193 iova_start fd070000
+[ 4845.278932] rdma write from lkey 1053a laddr fd070000 len 8193
+[ 4845.278940] rdma write completion
+[ 4845.278948] server rdma write complete 
+[ 4845.278951] server posted go ahead
+[ 4845.278956] send completion
+[ 4845.285571] recv completion
+[ 4845.285573] Received rkey 4059e addr 11941bc000 len 8193 from peer
+[ 4845.285583] server received sink adv
+[ 4845.285586] krping: post_inv = 1, reg_mr new rkey 0x1053b pgsz 4096 len 8193 iova_start fd070000
+[ 4845.285589] server posted rdma read req 
+[ 4845.285597] rdma read completion
+[ 4845.285606] server received read complete
+[ 4845.285616] compression complete
+[ 4845.285618] krping: post_inv = 0, reg_mr new rkey 0x1053c pgsz 4096 len 8193 iova_start fd070000
+[ 4845.285620] rdma write from lkey 1053c laddr fd070000 len 8193
+[ 4845.285628] rdma write completion
+[ 4845.285637] server rdma write complete 
+[ 4845.285639] server posted go ahead
+[ 4845.285644] send completion
+[ 4845.292360] recv completion
+[ 4845.292362] Received rkey 4059f addr 11941bc000 len 8193 from peer
+[ 4845.292372] server received sink adv
+[ 4845.292376] krping: post_inv = 1, reg_mr new rkey 0x1053d pgsz 4096 len 8193 iova_start fd070000
+[ 4845.292378] server posted rdma read req 
+[ 4845.292386] rdma read completion
+[ 4845.292395] server received read complete
+[ 4845.292419] compression complete
+[ 4845.292422] krping: post_inv = 0, reg_mr new rkey 0x1053e pgsz 4096 len 8193 iova_start fd070000
+[ 4845.292424] rdma write from lkey 1053e laddr fd070000 len 8193
+[ 4845.292435] rdma write completion
+[ 4845.292443] server rdma write complete 
+[ 4845.292446] server posted go ahead
+[ 4845.292452] send completion
+[ 4845.296621] recv completion
+[ 4845.296624] Received rkey 405a0 addr 11941bc000 len 8193 from peer
+[ 4845.296637] server received sink adv
+[ 4845.296641] krping: post_inv = 1, reg_mr new rkey 0x1053f pgsz 4096 len 8193 iova_start fd070000
+[ 4845.296644] server posted rdma read req 
+[ 4845.296652] rdma read completion
+[ 4845.296670] server received read complete
+[ 4845.296695] compression complete
+[ 4845.296697] krping: post_inv = 0, reg_mr new rkey 0x10540 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.296700] rdma write from lkey 10540 laddr fd070000 len 8193
+[ 4845.296707] rdma write completion
+[ 4845.296716] server rdma write complete 
+[ 4845.296718] server posted go ahead
+[ 4845.296724] send completion
+[ 4845.302550] recv completion
+[ 4845.302553] Received rkey 405a1 addr 11941bc000 len 8193 from peer
+[ 4845.302566] server received sink adv
+[ 4845.302570] krping: post_inv = 1, reg_mr new rkey 0x10541 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.302575] server posted rdma read req 
+[ 4845.302584] rdma read completion
+[ 4845.302594] server received read complete
+[ 4845.302606] compression complete
+[ 4845.302608] krping: post_inv = 0, reg_mr new rkey 0x10542 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.302611] rdma write from lkey 10542 laddr fd070000 len 8193
+[ 4845.302618] rdma write completion
+[ 4845.302626] server rdma write complete 
+[ 4845.302630] server posted go ahead
+[ 4845.302635] send completion
+[ 4845.310036] recv completion
+[ 4845.310039] Received rkey 405a2 addr 11941bc000 len 8193 from peer
+[ 4845.310050] server received sink adv
+[ 4845.310054] krping: post_inv = 1, reg_mr new rkey 0x10543 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.310056] server posted rdma read req 
+[ 4845.310063] rdma read completion
+[ 4845.310074] server received read complete
+[ 4845.310096] compression complete
+[ 4845.310103] krping: post_inv = 0, reg_mr new rkey 0x10544 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.310105] rdma write from lkey 10544 laddr fd070000 len 8193
+[ 4845.310113] rdma write completion
+[ 4845.310122] server rdma write complete 
+[ 4845.310124] server posted go ahead
+[ 4845.310129] send completion
+[ 4845.314277] recv completion
+[ 4845.314280] Received rkey 405a3 addr 11941bc000 len 8193 from peer
+[ 4845.314291] server received sink adv
+[ 4845.314294] krping: post_inv = 1, reg_mr new rkey 0x10545 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.314297] server posted rdma read req 
+[ 4845.314305] rdma read completion
+[ 4845.314316] server received read complete
+[ 4845.314336] compression complete
+[ 4845.314338] krping: post_inv = 0, reg_mr new rkey 0x10546 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.314340] rdma write from lkey 10546 laddr fd070000 len 8193
+[ 4845.314348] rdma write completion
+[ 4845.314357] server rdma write complete 
+[ 4845.314359] server posted go ahead
+[ 4845.314365] send completion
+[ 4845.319814] recv completion
+[ 4845.319816] Received rkey 405a4 addr 11941bc000 len 8193 from peer
+[ 4845.319826] server received sink adv
+[ 4845.319829] krping: post_inv = 1, reg_mr new rkey 0x10547 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.319831] server posted rdma read req 
+[ 4845.319838] rdma read completion
+[ 4845.319850] server received read complete
+[ 4845.319868] compression complete
+[ 4845.319870] krping: post_inv = 0, reg_mr new rkey 0x10548 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.319873] rdma write from lkey 10548 laddr fd070000 len 8193
+[ 4845.319880] rdma write completion
+[ 4845.319889] server rdma write complete 
+[ 4845.319891] server posted go ahead
+[ 4845.319896] send completion
+[ 4845.327295] recv completion
+[ 4845.327298] Received rkey 405a5 addr 11941bc000 len 8193 from peer
+[ 4845.327308] server received sink adv
+[ 4845.327311] krping: post_inv = 1, reg_mr new rkey 0x10549 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.327314] server posted rdma read req 
+[ 4845.327323] rdma read completion
+[ 4845.327332] server received read complete
+[ 4845.327342] compression complete
+[ 4845.327344] krping: post_inv = 0, reg_mr new rkey 0x1054a pgsz 4096 len 8193 iova_start fd070000
+[ 4845.327346] rdma write from lkey 1054a laddr fd070000 len 8193
+[ 4845.327354] rdma write completion
+[ 4845.327363] server rdma write complete 
+[ 4845.327365] server posted go ahead
+[ 4845.327370] send completion
+[ 4845.333893] recv completion
+[ 4845.333895] Received rkey 405a6 addr 11941bc000 len 8193 from peer
+[ 4845.333906] server received sink adv
+[ 4845.333909] krping: post_inv = 1, reg_mr new rkey 0x1054b pgsz 4096 len 8193 iova_start fd070000
+[ 4845.333912] server posted rdma read req 
+[ 4845.333919] rdma read completion
+[ 4845.333929] server received read complete
+[ 4845.333947] compression complete
+[ 4845.333949] krping: post_inv = 0, reg_mr new rkey 0x1054c pgsz 4096 len 8193 iova_start fd070000
+[ 4845.333951] rdma write from lkey 1054c laddr fd070000 len 8193
+[ 4845.333959] rdma write completion
+[ 4845.333968] server rdma write complete 
+[ 4845.333970] server posted go ahead
+[ 4845.333975] send completion
+[ 4845.341260] recv completion
+[ 4845.341262] Received rkey 405a7 addr 11941bc000 len 8193 from peer
+[ 4845.341271] server received sink adv
+[ 4845.341274] krping: post_inv = 1, reg_mr new rkey 0x1054d pgsz 4096 len 8193 iova_start fd070000
+[ 4845.341277] server posted rdma read req 
+[ 4845.341284] rdma read completion
+[ 4845.341295] server received read complete
+[ 4845.341313] compression complete
+[ 4845.341315] krping: post_inv = 0, reg_mr new rkey 0x1054e pgsz 4096 len 8193 iova_start fd070000
+[ 4845.341317] rdma write from lkey 1054e laddr fd070000 len 8193
+[ 4845.341325] rdma write completion
+[ 4845.341333] server rdma write complete 
+[ 4845.341335] server posted go ahead
+[ 4845.341343] send completion
+[ 4845.348942] recv completion
+[ 4845.348945] Received rkey 405a8 addr 11941bc000 len 8193 from peer
+[ 4845.348955] server received sink adv
+[ 4845.348958] krping: post_inv = 1, reg_mr new rkey 0x1054f pgsz 4096 len 8193 iova_start fd070000
+[ 4845.348961] server posted rdma read req 
+[ 4845.348968] rdma read completion
+[ 4845.348979] server received read complete
+[ 4845.348989] compression complete
+[ 4845.348991] krping: post_inv = 0, reg_mr new rkey 0x10550 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.348994] rdma write from lkey 10550 laddr fd070000 len 8193
+[ 4845.349001] rdma write completion
+[ 4845.349010] server rdma write complete 
+[ 4845.349012] server posted go ahead
+[ 4845.349018] send completion
+[ 4845.356167] recv completion
+[ 4845.356169] Received rkey 405a9 addr 11941bc000 len 8193 from peer
+[ 4845.356180] server received sink adv
+[ 4845.356183] krping: post_inv = 1, reg_mr new rkey 0x10551 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.356186] server posted rdma read req 
+[ 4845.356192] rdma read completion
+[ 4845.356203] server received read complete
+[ 4845.356223] compression complete
+[ 4845.356225] krping: post_inv = 0, reg_mr new rkey 0x10552 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.356228] rdma write from lkey 10552 laddr fd070000 len 8193
+[ 4845.356236] rdma write completion
+[ 4845.356245] server rdma write complete 
+[ 4845.356247] server posted go ahead
+[ 4845.356252] send completion
+[ 4845.362488] recv completion
+[ 4845.362490] Received rkey 405aa addr 11941bc000 len 8193 from peer
+[ 4845.362501] server received sink adv
+[ 4845.362504] krping: post_inv = 1, reg_mr new rkey 0x10553 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.362507] server posted rdma read req 
+[ 4845.362514] rdma read completion
+[ 4845.362524] server received read complete
+[ 4845.362537] compression complete
+[ 4845.362539] krping: post_inv = 0, reg_mr new rkey 0x10554 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.362542] rdma write from lkey 10554 laddr fd070000 len 8193
+[ 4845.362551] rdma write completion
+[ 4845.362559] server rdma write complete 
+[ 4845.362561] server posted go ahead
+[ 4845.362567] send completion
+[ 4845.369490] recv completion
+[ 4845.369493] Received rkey 405ab addr 11941bc000 len 8193 from peer
+[ 4845.369503] server received sink adv
+[ 4845.369506] krping: post_inv = 1, reg_mr new rkey 0x10555 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.369509] server posted rdma read req 
+[ 4845.369515] rdma read completion
+[ 4845.369535] server received read complete
+[ 4845.369563] compression complete
+[ 4845.369565] krping: post_inv = 0, reg_mr new rkey 0x10556 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.369567] rdma write from lkey 10556 laddr fd070000 len 8193
+[ 4845.369576] rdma write completion
+[ 4845.369586] server rdma write complete 
+[ 4845.369588] server posted go ahead
+[ 4845.369594] send completion
+[ 4845.374438] recv completion
+[ 4845.374440] Received rkey 405ac addr 11941bc000 len 8193 from peer
+[ 4845.374451] server received sink adv
+[ 4845.374454] krping: post_inv = 1, reg_mr new rkey 0x10557 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.374457] server posted rdma read req 
+[ 4845.374464] rdma read completion
+[ 4845.374474] server received read complete
+[ 4845.374499] compression complete
+[ 4845.374501] krping: post_inv = 0, reg_mr new rkey 0x10558 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.374503] rdma write from lkey 10558 laddr fd070000 len 8193
+[ 4845.374511] rdma write completion
+[ 4845.374520] server rdma write complete 
+[ 4845.374522] server posted go ahead
+[ 4845.374528] send completion
+[ 4845.380849] recv completion
+[ 4845.380851] Received rkey 405ad addr 11941bc000 len 8193 from peer
+[ 4845.380861] server received sink adv
+[ 4845.380865] krping: post_inv = 1, reg_mr new rkey 0x10559 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.380868] server posted rdma read req 
+[ 4845.380875] rdma read completion
+[ 4845.380884] server received read complete
+[ 4845.380902] compression complete
+[ 4845.380904] krping: post_inv = 0, reg_mr new rkey 0x1055a pgsz 4096 len 8193 iova_start fd070000
+[ 4845.380906] rdma write from lkey 1055a laddr fd070000 len 8193
+[ 4845.380914] rdma write completion
+[ 4845.380923] server rdma write complete 
+[ 4845.380925] server posted go ahead
+[ 4845.380930] send completion
+[ 4845.389845] recv completion
+[ 4845.389847] Received rkey 405ae addr 11941bc000 len 8193 from peer
+[ 4845.389858] server received sink adv
+[ 4845.389861] krping: post_inv = 1, reg_mr new rkey 0x1055b pgsz 4096 len 8193 iova_start fd070000
+[ 4845.389863] server posted rdma read req 
+[ 4845.389870] rdma read completion
+[ 4845.389880] server received read complete
+[ 4845.389904] compression complete
+[ 4845.389906] krping: post_inv = 0, reg_mr new rkey 0x1055c pgsz 4096 len 8193 iova_start fd070000
+[ 4845.389908] rdma write from lkey 1055c laddr fd070000 len 8193
+[ 4845.389916] rdma write completion
+[ 4845.389927] server rdma write complete 
+[ 4845.389929] server posted go ahead
+[ 4845.389934] send completion
+[ 4845.397932] recv completion
+[ 4845.397934] Received rkey 405af addr 11941bc000 len 8193 from peer
+[ 4845.397944] server received sink adv
+[ 4845.397947] krping: post_inv = 1, reg_mr new rkey 0x1055d pgsz 4096 len 8193 iova_start fd070000
+[ 4845.397949] server posted rdma read req 
+[ 4845.397956] rdma read completion
+[ 4845.397968] server received read complete
+[ 4845.397993] compression complete
+[ 4845.397995] krping: post_inv = 0, reg_mr new rkey 0x1055e pgsz 4096 len 8193 iova_start fd070000
+[ 4845.397998] rdma write from lkey 1055e laddr fd070000 len 8193
+[ 4845.398007] rdma write completion
+[ 4845.398015] server rdma write complete 
+[ 4845.398017] server posted go ahead
+[ 4845.398023] send completion
+[ 4845.406307] recv completion
+[ 4845.406310] Received rkey 405b0 addr 11941bc000 len 8193 from peer
+[ 4845.406320] server received sink adv
+[ 4845.406324] krping: post_inv = 1, reg_mr new rkey 0x1055f pgsz 4096 len 8193 iova_start fd070000
+[ 4845.406328] server posted rdma read req 
+[ 4845.406335] rdma read completion
+[ 4845.406347] server received read complete
+[ 4845.406373] compression complete
+[ 4845.406377] krping: post_inv = 0, reg_mr new rkey 0x10560 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.406379] rdma write from lkey 10560 laddr fd070000 len 8193
+[ 4845.406387] rdma write completion
+[ 4845.406395] server rdma write complete 
+[ 4845.406397] server posted go ahead
+[ 4845.406403] send completion
+[ 4845.412243] recv completion
+[ 4845.412246] Received rkey 405b1 addr 11941bc000 len 8193 from peer
+[ 4845.412255] server received sink adv
+[ 4845.412258] krping: post_inv = 1, reg_mr new rkey 0x10561 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.412261] server posted rdma read req 
+[ 4845.412269] rdma read completion
+[ 4845.412278] server received read complete
+[ 4845.412304] compression complete
+[ 4845.412306] krping: post_inv = 0, reg_mr new rkey 0x10562 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.412310] rdma write from lkey 10562 laddr fd070000 len 8193
+[ 4845.412319] rdma write completion
+[ 4845.412328] server rdma write complete 
+[ 4845.412330] server posted go ahead
+[ 4845.412335] send completion
+[ 4845.417636] recv completion
+[ 4845.417638] Received rkey 405b2 addr 11941bc000 len 8193 from peer
+[ 4845.417649] server received sink adv
+[ 4845.417652] krping: post_inv = 1, reg_mr new rkey 0x10563 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.417655] server posted rdma read req 
+[ 4845.417662] rdma read completion
+[ 4845.417672] server received read complete
+[ 4845.417699] compression complete
+[ 4845.417701] krping: post_inv = 0, reg_mr new rkey 0x10564 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.417704] rdma write from lkey 10564 laddr fd070000 len 8193
+[ 4845.417711] rdma write completion
+[ 4845.417720] server rdma write complete 
+[ 4845.417722] server posted go ahead
+[ 4845.417728] send completion
+[ 4845.421907] recv completion
+[ 4845.421910] Received rkey 405b3 addr 11941bc000 len 8193 from peer
+[ 4845.421920] server received sink adv
+[ 4845.421922] krping: post_inv = 1, reg_mr new rkey 0x10565 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.421925] server posted rdma read req 
+[ 4845.421932] rdma read completion
+[ 4845.421941] server received read complete
+[ 4845.421965] compression complete
+[ 4845.421967] krping: post_inv = 0, reg_mr new rkey 0x10566 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.421971] rdma write from lkey 10566 laddr fd070000 len 8193
+[ 4845.421978] rdma write completion
+[ 4845.421987] server rdma write complete 
+[ 4845.421989] server posted go ahead
+[ 4845.421994] send completion
+[ 4845.426698] recv completion
+[ 4845.426700] Received rkey 405b4 addr 11941bc000 len 8193 from peer
+[ 4845.426709] server received sink adv
+[ 4845.426713] krping: post_inv = 1, reg_mr new rkey 0x10567 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.426715] server posted rdma read req 
+[ 4845.426722] rdma read completion
+[ 4845.426732] server received read complete
+[ 4845.426750] compression complete
+[ 4845.426752] krping: post_inv = 0, reg_mr new rkey 0x10568 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.426754] rdma write from lkey 10568 laddr fd070000 len 8193
+[ 4845.426762] rdma write completion
+[ 4845.426771] server rdma write complete 
+[ 4845.426773] server posted go ahead
+[ 4845.426779] send completion
+[ 4845.431986] recv completion
+[ 4845.431988] Received rkey 405b5 addr 11941bc000 len 8193 from peer
+[ 4845.431998] server received sink adv
+[ 4845.432001] krping: post_inv = 1, reg_mr new rkey 0x10569 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.432004] server posted rdma read req 
+[ 4845.432012] rdma read completion
+[ 4845.432022] server received read complete
+[ 4845.432037] compression complete
+[ 4845.432039] krping: post_inv = 0, reg_mr new rkey 0x1056a pgsz 4096 len 8193 iova_start fd070000
+[ 4845.432041] rdma write from lkey 1056a laddr fd070000 len 8193
+[ 4845.432050] rdma write completion
+[ 4845.432059] server rdma write complete 
+[ 4845.432060] server posted go ahead
+[ 4845.432067] send completion
+[ 4845.438154] recv completion
+[ 4845.438156] Received rkey 405b6 addr 11941bc000 len 8193 from peer
+[ 4845.438167] server received sink adv
+[ 4845.438170] krping: post_inv = 1, reg_mr new rkey 0x1056b pgsz 4096 len 8193 iova_start fd070000
+[ 4845.438173] server posted rdma read req 
+[ 4845.438180] rdma read completion
+[ 4845.438190] server received read complete
+[ 4845.438219] compression complete
+[ 4845.438221] krping: post_inv = 0, reg_mr new rkey 0x1056c pgsz 4096 len 8193 iova_start fd070000
+[ 4845.438223] rdma write from lkey 1056c laddr fd070000 len 8193
+[ 4845.438230] rdma write completion
+[ 4845.438239] server rdma write complete 
+[ 4845.438241] server posted go ahead
+[ 4845.438246] send completion
+[ 4845.446033] recv completion
+[ 4845.446036] Received rkey 405b7 addr 11941bc000 len 8193 from peer
+[ 4845.446047] server received sink adv
+[ 4845.446050] krping: post_inv = 1, reg_mr new rkey 0x1056d pgsz 4096 len 8193 iova_start fd070000
+[ 4845.446053] server posted rdma read req 
+[ 4845.446060] rdma read completion
+[ 4845.446069] server received read complete
+[ 4845.446096] compression complete
+[ 4845.446098] krping: post_inv = 0, reg_mr new rkey 0x1056e pgsz 4096 len 8193 iova_start fd070000
+[ 4845.446101] rdma write from lkey 1056e laddr fd070000 len 8193
+[ 4845.446110] rdma write completion
+[ 4845.446119] server rdma write complete 
+[ 4845.446121] server posted go ahead
+[ 4845.446126] send completion
+[ 4845.452515] recv completion
+[ 4845.452518] Received rkey 405b8 addr 11941bc000 len 8193 from peer
+[ 4845.452528] server received sink adv
+[ 4845.452531] krping: post_inv = 1, reg_mr new rkey 0x1056f pgsz 4096 len 8193 iova_start fd070000
+[ 4845.452534] server posted rdma read req 
+[ 4845.452541] rdma read completion
+[ 4845.452554] server received read complete
+[ 4845.452572] compression complete
+[ 4845.452574] krping: post_inv = 0, reg_mr new rkey 0x10570 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.452577] rdma write from lkey 10570 laddr fd070000 len 8193
+[ 4845.452585] rdma write completion
+[ 4845.452594] server rdma write complete 
+[ 4845.452596] server posted go ahead
+[ 4845.452602] send completion
+[ 4845.460026] recv completion
+[ 4845.460028] Received rkey 405b9 addr 11941bc000 len 8193 from peer
+[ 4845.460038] server received sink adv
+[ 4845.460042] krping: post_inv = 1, reg_mr new rkey 0x10571 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.460045] server posted rdma read req 
+[ 4845.460051] rdma read completion
+[ 4845.460061] server received read complete
+[ 4845.460075] compression complete
+[ 4845.460077] krping: post_inv = 0, reg_mr new rkey 0x10572 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.460080] rdma write from lkey 10572 laddr fd070000 len 8193
+[ 4845.460087] rdma write completion
+[ 4845.460096] server rdma write complete 
+[ 4845.460098] server posted go ahead
+[ 4845.460104] send completion
+[ 4845.466455] recv completion
+[ 4845.466457] Received rkey 405ba addr 11941bc000 len 8193 from peer
+[ 4845.466468] server received sink adv
+[ 4845.466470] krping: post_inv = 1, reg_mr new rkey 0x10573 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.466473] server posted rdma read req 
+[ 4845.466480] rdma read completion
+[ 4845.466491] server received read complete
+[ 4845.466500] compression complete
+[ 4845.466503] krping: post_inv = 0, reg_mr new rkey 0x10574 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.466505] rdma write from lkey 10574 laddr fd070000 len 8193
+[ 4845.466513] rdma write completion
+[ 4845.466522] server rdma write complete 
+[ 4845.466524] server posted go ahead
+[ 4845.466529] send completion
+[ 4845.475511] recv completion
+[ 4845.475514] Received rkey 405bb addr 11941bc000 len 8193 from peer
+[ 4845.475525] server received sink adv
+[ 4845.475527] krping: post_inv = 1, reg_mr new rkey 0x10575 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.475530] server posted rdma read req 
+[ 4845.475537] rdma read completion
+[ 4845.475548] server received read complete
+[ 4845.475567] compression complete
+[ 4845.475569] krping: post_inv = 0, reg_mr new rkey 0x10576 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.475572] rdma write from lkey 10576 laddr fd070000 len 8193
+[ 4845.475580] rdma write completion
+[ 4845.475589] server rdma write complete 
+[ 4845.475591] server posted go ahead
+[ 4845.475597] send completion
+[ 4845.482411] recv completion
+[ 4845.482414] Received rkey 405bc addr 11941bc000 len 8193 from peer
+[ 4845.482424] server received sink adv
+[ 4845.482427] krping: post_inv = 1, reg_mr new rkey 0x10577 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.482429] server posted rdma read req 
+[ 4845.482436] rdma read completion
+[ 4845.482447] server received read complete
+[ 4845.482465] compression complete
+[ 4845.482468] krping: post_inv = 0, reg_mr new rkey 0x10578 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.482470] rdma write from lkey 10578 laddr fd070000 len 8193
+[ 4845.482478] rdma write completion
+[ 4845.482487] server rdma write complete 
+[ 4845.482490] server posted go ahead
+[ 4845.482496] send completion
+[ 4845.488825] recv completion
+[ 4845.488828] Received rkey 405bd addr 11941bc000 len 8193 from peer
+[ 4845.488838] server received sink adv
+[ 4845.488841] krping: post_inv = 1, reg_mr new rkey 0x10579 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.488843] server posted rdma read req 
+[ 4845.488850] rdma read completion
+[ 4845.488860] server received read complete
+[ 4845.488879] compression complete
+[ 4845.488881] krping: post_inv = 0, reg_mr new rkey 0x1057a pgsz 4096 len 8193 iova_start fd070000
+[ 4845.488883] rdma write from lkey 1057a laddr fd070000 len 8193
+[ 4845.488891] rdma write completion
+[ 4845.488900] server rdma write complete 
+[ 4845.488902] server posted go ahead
+[ 4845.488907] send completion
+[ 4845.495180] recv completion
+[ 4845.495182] Received rkey 405be addr 11941bc000 len 8193 from peer
+[ 4845.495192] server received sink adv
+[ 4845.495196] krping: post_inv = 1, reg_mr new rkey 0x1057b pgsz 4096 len 8193 iova_start fd070000
+[ 4845.495199] server posted rdma read req 
+[ 4845.495205] rdma read completion
+[ 4845.495216] server received read complete
+[ 4845.495236] compression complete
+[ 4845.495238] krping: post_inv = 0, reg_mr new rkey 0x1057c pgsz 4096 len 8193 iova_start fd070000
+[ 4845.495240] rdma write from lkey 1057c laddr fd070000 len 8193
+[ 4845.495250] rdma write completion
+[ 4845.495258] server rdma write complete 
+[ 4845.495261] server posted go ahead
+[ 4845.495266] send completion
+[ 4845.503633] recv completion
+[ 4845.503635] Received rkey 405bf addr 11941bc000 len 8193 from peer
+[ 4845.503646] server received sink adv
+[ 4845.503649] krping: post_inv = 1, reg_mr new rkey 0x1057d pgsz 4096 len 8193 iova_start fd070000
+[ 4845.503651] server posted rdma read req 
+[ 4845.503659] rdma read completion
+[ 4845.503670] server received read complete
+[ 4845.503688] compression complete
+[ 4845.503690] krping: post_inv = 0, reg_mr new rkey 0x1057e pgsz 4096 len 8193 iova_start fd070000
+[ 4845.503692] rdma write from lkey 1057e laddr fd070000 len 8193
+[ 4845.503700] rdma write completion
+[ 4845.503709] server rdma write complete 
+[ 4845.503711] server posted go ahead
+[ 4845.503716] send completion
+[ 4845.511377] recv completion
+[ 4845.511379] Received rkey 405c0 addr 11941bc000 len 8193 from peer
+[ 4845.511390] server received sink adv
+[ 4845.511393] krping: post_inv = 1, reg_mr new rkey 0x1057f pgsz 4096 len 8193 iova_start fd070000
+[ 4845.511395] server posted rdma read req 
+[ 4845.511403] rdma read completion
+[ 4845.511412] server received read complete
+[ 4845.511430] compression complete
+[ 4845.511432] krping: post_inv = 0, reg_mr new rkey 0x10580 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.511434] rdma write from lkey 10580 laddr fd070000 len 8193
+[ 4845.511442] rdma write completion
+[ 4845.511451] server rdma write complete 
+[ 4845.511453] server posted go ahead
+[ 4845.511458] send completion
+[ 4845.517617] recv completion
+[ 4845.517622] Received rkey 405c1 addr 11941bc000 len 8193 from peer
+[ 4845.517640] server received sink adv
+[ 4845.517645] krping: post_inv = 1, reg_mr new rkey 0x10581 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.517648] server posted rdma read req 
+[ 4845.517658] rdma read completion
+[ 4845.517668] server received read complete
+[ 4845.517676] compression complete
+[ 4845.517678] krping: post_inv = 0, reg_mr new rkey 0x10582 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.517681] rdma write from lkey 10582 laddr fd070000 len 8193
+[ 4845.517688] rdma write completion
+[ 4845.517698] server rdma write complete 
+[ 4845.517701] server posted go ahead
+[ 4845.517706] send completion
+[ 4845.525716] recv completion
+[ 4845.525720] Received rkey 405c2 addr 11941bc000 len 8193 from peer
+[ 4845.525732] server received sink adv
+[ 4845.525735] krping: post_inv = 1, reg_mr new rkey 0x10583 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.525739] server posted rdma read req 
+[ 4845.525745] rdma read completion
+[ 4845.525756] server received read complete
+[ 4845.525775] compression complete
+[ 4845.525776] krping: post_inv = 0, reg_mr new rkey 0x10584 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.525779] rdma write from lkey 10584 laddr fd070000 len 8193
+[ 4845.525790] rdma write completion
+[ 4845.525799] server rdma write complete 
+[ 4845.525801] server posted go ahead
+[ 4845.525806] send completion
+[ 4845.531697] recv completion
+[ 4845.531699] Received rkey 405c3 addr 11941bc000 len 8193 from peer
+[ 4845.531710] server received sink adv
+[ 4845.531713] krping: post_inv = 1, reg_mr new rkey 0x10585 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.531716] server posted rdma read req 
+[ 4845.531723] rdma read completion
+[ 4845.531733] server received read complete
+[ 4845.531745] compression complete
+[ 4845.531747] krping: post_inv = 0, reg_mr new rkey 0x10586 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.531750] rdma write from lkey 10586 laddr fd070000 len 8193
+[ 4845.531757] rdma write completion
+[ 4845.531765] server rdma write complete 
+[ 4845.531767] server posted go ahead
+[ 4845.531773] send completion
+[ 4845.538332] recv completion
+[ 4845.538335] Received rkey 405c4 addr 11941bc000 len 8193 from peer
+[ 4845.538345] server received sink adv
+[ 4845.538349] krping: post_inv = 1, reg_mr new rkey 0x10587 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.538351] server posted rdma read req 
+[ 4845.538358] rdma read completion
+[ 4845.538368] server received read complete
+[ 4845.538377] compression complete
+[ 4845.538379] krping: post_inv = 0, reg_mr new rkey 0x10588 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.538381] rdma write from lkey 10588 laddr fd070000 len 8193
+[ 4845.538392] rdma write completion
+[ 4845.538400] server rdma write complete 
+[ 4845.538402] server posted go ahead
+[ 4845.538408] send completion
+[ 4845.545685] recv completion
+[ 4845.545688] Received rkey 405c5 addr 11941bc000 len 8193 from peer
+[ 4845.545699] server received sink adv
+[ 4845.545702] krping: post_inv = 1, reg_mr new rkey 0x10589 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.545705] server posted rdma read req 
+[ 4845.545712] rdma read completion
+[ 4845.545723] server received read complete
+[ 4845.545734] compression complete
+[ 4845.545740] krping: post_inv = 0, reg_mr new rkey 0x1058a pgsz 4096 len 8193 iova_start fd070000
+[ 4845.545743] rdma write from lkey 1058a laddr fd070000 len 8193
+[ 4845.545750] rdma write completion
+[ 4845.545759] server rdma write complete 
+[ 4845.545761] server posted go ahead
+[ 4845.545766] send completion
+[ 4845.552202] recv completion
+[ 4845.552204] Received rkey 405c6 addr 11941bc000 len 8193 from peer
+[ 4845.552213] server received sink adv
+[ 4845.552216] krping: post_inv = 1, reg_mr new rkey 0x1058b pgsz 4096 len 8193 iova_start fd070000
+[ 4845.552219] server posted rdma read req 
+[ 4845.552226] rdma read completion
+[ 4845.552237] server received read complete
+[ 4845.552245] compression complete
+[ 4845.552247] krping: post_inv = 0, reg_mr new rkey 0x1058c pgsz 4096 len 8193 iova_start fd070000
+[ 4845.552250] rdma write from lkey 1058c laddr fd070000 len 8193
+[ 4845.552259] rdma write completion
+[ 4845.552268] server rdma write complete 
+[ 4845.552270] server posted go ahead
+[ 4845.552275] send completion
+[ 4845.559267] recv completion
+[ 4845.559272] Received rkey 405c7 addr 11941bc000 len 8193 from peer
+[ 4845.559286] server received sink adv
+[ 4845.559290] krping: post_inv = 1, reg_mr new rkey 0x1058d pgsz 4096 len 8193 iova_start fd070000
+[ 4845.559296] server posted rdma read req 
+[ 4845.559303] rdma read completion
+[ 4845.559312] server received read complete
+[ 4845.559337] compression complete
+[ 4845.559339] krping: post_inv = 0, reg_mr new rkey 0x1058e pgsz 4096 len 8193 iova_start fd070000
+[ 4845.559341] rdma write from lkey 1058e laddr fd070000 len 8193
+[ 4845.559349] rdma write completion
+[ 4845.559358] server rdma write complete 
+[ 4845.559363] server posted go ahead
+[ 4845.559368] send completion
+[ 4845.567908] recv completion
+[ 4845.567911] Received rkey 405c8 addr 11941bc000 len 8193 from peer
+[ 4845.567921] server received sink adv
+[ 4845.567925] krping: post_inv = 1, reg_mr new rkey 0x1058f pgsz 4096 len 8193 iova_start fd070000
+[ 4845.567929] server posted rdma read req 
+[ 4845.567935] rdma read completion
+[ 4845.567945] server received read complete
+[ 4845.567956] compression complete
+[ 4845.567958] krping: post_inv = 0, reg_mr new rkey 0x10590 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.567960] rdma write from lkey 10590 laddr fd070000 len 8193
+[ 4845.567968] rdma write completion
+[ 4845.567977] server rdma write complete 
+[ 4845.567979] server posted go ahead
+[ 4845.567985] send completion
+[ 4845.575715] recv completion
+[ 4845.575717] Received rkey 405c9 addr 11941bc000 len 8193 from peer
+[ 4845.575728] server received sink adv
+[ 4845.575731] krping: post_inv = 1, reg_mr new rkey 0x10591 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.575734] server posted rdma read req 
+[ 4845.575741] rdma read completion
+[ 4845.575753] server received read complete
+[ 4845.575768] compression complete
+[ 4845.575770] krping: post_inv = 0, reg_mr new rkey 0x10592 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.575773] rdma write from lkey 10592 laddr fd070000 len 8193
+[ 4845.575780] rdma write completion
+[ 4845.575789] server rdma write complete 
+[ 4845.575791] server posted go ahead
+[ 4845.575798] send completion
+[ 4845.582342] recv completion
+[ 4845.582344] Received rkey 405ca addr 11941bc000 len 8193 from peer
+[ 4845.582355] server received sink adv
+[ 4845.582358] krping: post_inv = 1, reg_mr new rkey 0x10593 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.582361] server posted rdma read req 
+[ 4845.582368] rdma read completion
+[ 4845.582379] server received read complete
+[ 4845.582402] compression complete
+[ 4845.582404] krping: post_inv = 0, reg_mr new rkey 0x10594 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.582407] rdma write from lkey 10594 laddr fd070000 len 8193
+[ 4845.582415] rdma write completion
+[ 4845.582423] server rdma write complete 
+[ 4845.582425] server posted go ahead
+[ 4845.582431] send completion
+[ 4845.590382] recv completion
+[ 4845.590384] Received rkey 405cb addr 11941bc000 len 8193 from peer
+[ 4845.590395] server received sink adv
+[ 4845.590398] krping: post_inv = 1, reg_mr new rkey 0x10595 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.590401] server posted rdma read req 
+[ 4845.590408] rdma read completion
+[ 4845.590418] server received read complete
+[ 4845.590427] compression complete
+[ 4845.590429] krping: post_inv = 0, reg_mr new rkey 0x10596 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.590432] rdma write from lkey 10596 laddr fd070000 len 8193
+[ 4845.590441] rdma write completion
+[ 4845.590450] server rdma write complete 
+[ 4845.590452] server posted go ahead
+[ 4845.590457] send completion
+[ 4845.595722] recv completion
+[ 4845.595724] Received rkey 405cc addr 11941bc000 len 8193 from peer
+[ 4845.595734] server received sink adv
+[ 4845.595737] krping: post_inv = 1, reg_mr new rkey 0x10597 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.595740] server posted rdma read req 
+[ 4845.595747] rdma read completion
+[ 4845.595756] server received read complete
+[ 4845.595767] compression complete
+[ 4845.595769] krping: post_inv = 0, reg_mr new rkey 0x10598 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.595772] rdma write from lkey 10598 laddr fd070000 len 8193
+[ 4845.595779] rdma write completion
+[ 4845.595787] server rdma write complete 
+[ 4845.595790] server posted go ahead
+[ 4845.595795] send completion
+[ 4845.603416] recv completion
+[ 4845.603419] Received rkey 405cd addr 11941bc000 len 8193 from peer
+[ 4845.603429] server received sink adv
+[ 4845.603432] krping: post_inv = 1, reg_mr new rkey 0x10599 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.603435] server posted rdma read req 
+[ 4845.603444] rdma read completion
+[ 4845.603453] server received read complete
+[ 4845.603466] compression complete
+[ 4845.603468] krping: post_inv = 0, reg_mr new rkey 0x1059a pgsz 4096 len 8193 iova_start fd070000
+[ 4845.603470] rdma write from lkey 1059a laddr fd070000 len 8193
+[ 4845.603478] rdma write completion
+[ 4845.603486] server rdma write complete 
+[ 4845.603489] server posted go ahead
+[ 4845.603494] send completion
+[ 4845.609036] recv completion
+[ 4845.609038] Received rkey 405ce addr 11941bc000 len 8193 from peer
+[ 4845.609048] server received sink adv
+[ 4845.609051] krping: post_inv = 1, reg_mr new rkey 0x1059b pgsz 4096 len 8193 iova_start fd070000
+[ 4845.609054] server posted rdma read req 
+[ 4845.609061] rdma read completion
+[ 4845.609071] server received read complete
+[ 4845.609090] compression complete
+[ 4845.609092] krping: post_inv = 0, reg_mr new rkey 0x1059c pgsz 4096 len 8193 iova_start fd070000
+[ 4845.609095] rdma write from lkey 1059c laddr fd070000 len 8193
+[ 4845.609102] rdma write completion
+[ 4845.609111] server rdma write complete 
+[ 4845.609113] server posted go ahead
+[ 4845.609118] send completion
+[ 4845.613291] recv completion
+[ 4845.613294] Received rkey 405cf addr 11941bc000 len 8193 from peer
+[ 4845.613304] server received sink adv
+[ 4845.613306] krping: post_inv = 1, reg_mr new rkey 0x1059d pgsz 4096 len 8193 iova_start fd070000
+[ 4845.613309] server posted rdma read req 
+[ 4845.613316] rdma read completion
+[ 4845.613327] server received read complete
+[ 4845.613347] compression complete
+[ 4845.613349] krping: post_inv = 0, reg_mr new rkey 0x1059e pgsz 4096 len 8193 iova_start fd070000
+[ 4845.613351] rdma write from lkey 1059e laddr fd070000 len 8193
+[ 4845.613361] rdma write completion
+[ 4845.613370] server rdma write complete 
+[ 4845.613372] server posted go ahead
+[ 4845.613377] send completion
+[ 4845.619247] recv completion
+[ 4845.619249] Received rkey 405d0 addr 11941bc000 len 8193 from peer
+[ 4845.619260] server received sink adv
+[ 4845.619262] krping: post_inv = 1, reg_mr new rkey 0x1059f pgsz 4096 len 8193 iova_start fd070000
+[ 4845.619266] server posted rdma read req 
+[ 4845.619272] rdma read completion
+[ 4845.619282] server received read complete
+[ 4845.619296] compression complete
+[ 4845.619298] krping: post_inv = 0, reg_mr new rkey 0x105a0 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.619300] rdma write from lkey 105a0 laddr fd070000 len 8193
+[ 4845.619307] rdma write completion
+[ 4845.619317] server rdma write complete 
+[ 4845.619319] server posted go ahead
+[ 4845.619325] send completion
+[ 4845.626683] recv completion
+[ 4845.626685] Received rkey 405d1 addr 11941bc000 len 8193 from peer
+[ 4845.626696] server received sink adv
+[ 4845.626700] krping: post_inv = 1, reg_mr new rkey 0x105a1 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.626703] server posted rdma read req 
+[ 4845.626711] rdma read completion
+[ 4845.626720] server received read complete
+[ 4845.626746] compression complete
+[ 4845.626748] krping: post_inv = 0, reg_mr new rkey 0x105a2 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.626752] rdma write from lkey 105a2 laddr fd070000 len 8193
+[ 4845.626760] rdma write completion
+[ 4845.626769] server rdma write complete 
+[ 4845.626771] server posted go ahead
+[ 4845.626776] send completion
+[ 4845.631385] recv completion
+[ 4845.631387] Received rkey 405d2 addr 11941bc000 len 8193 from peer
+[ 4845.631398] server received sink adv
+[ 4845.631401] krping: post_inv = 1, reg_mr new rkey 0x105a3 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.631404] server posted rdma read req 
+[ 4845.631412] rdma read completion
+[ 4845.631421] server received read complete
+[ 4845.631448] compression complete
+[ 4845.631450] krping: post_inv = 0, reg_mr new rkey 0x105a4 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.631453] rdma write from lkey 105a4 laddr fd070000 len 8193
+[ 4845.631461] rdma write completion
+[ 4845.631470] server rdma write complete 
+[ 4845.631472] server posted go ahead
+[ 4845.631478] send completion
+[ 4845.637000] recv completion
+[ 4845.637002] Received rkey 405d3 addr 11941bc000 len 8193 from peer
+[ 4845.637012] server received sink adv
+[ 4845.637015] krping: post_inv = 1, reg_mr new rkey 0x105a5 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.637018] server posted rdma read req 
+[ 4845.637024] rdma read completion
+[ 4845.637033] server received read complete
+[ 4845.637051] compression complete
+[ 4845.637053] krping: post_inv = 0, reg_mr new rkey 0x105a6 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.637055] rdma write from lkey 105a6 laddr fd070000 len 8193
+[ 4845.637062] rdma write completion
+[ 4845.637073] server rdma write complete 
+[ 4845.637075] server posted go ahead
+[ 4845.637080] send completion
+[ 4845.644854] recv completion
+[ 4845.644856] Received rkey 405d4 addr 11941bc000 len 8193 from peer
+[ 4845.644867] server received sink adv
+[ 4845.644870] krping: post_inv = 1, reg_mr new rkey 0x105a7 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.644873] server posted rdma read req 
+[ 4845.644879] rdma read completion
+[ 4845.644891] server received read complete
+[ 4845.644908] compression complete
+[ 4845.644910] krping: post_inv = 0, reg_mr new rkey 0x105a8 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.644912] rdma write from lkey 105a8 laddr fd070000 len 8193
+[ 4845.644920] rdma write completion
+[ 4845.644929] server rdma write complete 
+[ 4845.644931] server posted go ahead
+[ 4845.644936] send completion
+[ 4845.651031] recv completion
+[ 4845.651033] Received rkey 405d5 addr 11941bc000 len 8193 from peer
+[ 4845.651044] server received sink adv
+[ 4845.651047] krping: post_inv = 1, reg_mr new rkey 0x105a9 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.651049] server posted rdma read req 
+[ 4845.651056] rdma read completion
+[ 4845.651064] server received read complete
+[ 4845.651074] compression complete
+[ 4845.651076] krping: post_inv = 0, reg_mr new rkey 0x105aa pgsz 4096 len 8193 iova_start fd070000
+[ 4845.651078] rdma write from lkey 105aa laddr fd070000 len 8193
+[ 4845.651088] rdma write completion
+[ 4845.651096] server rdma write complete 
+[ 4845.651098] server posted go ahead
+[ 4845.651104] send completion
+[ 4845.656717] recv completion
+[ 4845.656719] Received rkey 405d6 addr 11941bc000 len 8193 from peer
+[ 4845.656729] server received sink adv
+[ 4845.656733] krping: post_inv = 1, reg_mr new rkey 0x105ab pgsz 4096 len 8193 iova_start fd070000
+[ 4845.656735] server posted rdma read req 
+[ 4845.656744] rdma read completion
+[ 4845.656754] server received read complete
+[ 4845.656771] compression complete
+[ 4845.656773] krping: post_inv = 0, reg_mr new rkey 0x105ac pgsz 4096 len 8193 iova_start fd070000
+[ 4845.656776] rdma write from lkey 105ac laddr fd070000 len 8193
+[ 4845.656785] rdma write completion
+[ 4845.656794] server rdma write complete 
+[ 4845.656796] server posted go ahead
+[ 4845.656801] send completion
+[ 4845.663190] recv completion
+[ 4845.663193] Received rkey 405d7 addr 11941bc000 len 8193 from peer
+[ 4845.663203] server received sink adv
+[ 4845.663206] krping: post_inv = 1, reg_mr new rkey 0x105ad pgsz 4096 len 8193 iova_start fd070000
+[ 4845.663209] server posted rdma read req 
+[ 4845.663216] rdma read completion
+[ 4845.663227] server received read complete
+[ 4845.663249] compression complete
+[ 4845.663251] krping: post_inv = 0, reg_mr new rkey 0x105ae pgsz 4096 len 8193 iova_start fd070000
+[ 4845.663253] rdma write from lkey 105ae laddr fd070000 len 8193
+[ 4845.663261] rdma write completion
+[ 4845.663270] server rdma write complete 
+[ 4845.663272] server posted go ahead
+[ 4845.663278] send completion
+[ 4845.671134] recv completion
+[ 4845.671136] Received rkey 405d8 addr 11941bc000 len 8193 from peer
+[ 4845.671147] server received sink adv
+[ 4845.671150] krping: post_inv = 1, reg_mr new rkey 0x105af pgsz 4096 len 8193 iova_start fd070000
+[ 4845.671153] server posted rdma read req 
+[ 4845.671160] rdma read completion
+[ 4845.671170] server received read complete
+[ 4845.671179] compression complete
+[ 4845.671181] krping: post_inv = 0, reg_mr new rkey 0x105b0 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.671183] rdma write from lkey 105b0 laddr fd070000 len 8193
+[ 4845.671193] rdma write completion
+[ 4845.671201] server rdma write complete 
+[ 4845.671203] server posted go ahead
+[ 4845.671209] send completion
+[ 4845.678650] recv completion
+[ 4845.678652] Received rkey 405d9 addr 11941bc000 len 8193 from peer
+[ 4845.678663] server received sink adv
+[ 4845.678666] krping: post_inv = 1, reg_mr new rkey 0x105b1 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.678669] server posted rdma read req 
+[ 4845.678675] rdma read completion
+[ 4845.678686] server received read complete
+[ 4845.678715] compression complete
+[ 4845.678718] krping: post_inv = 0, reg_mr new rkey 0x105b2 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.678721] rdma write from lkey 105b2 laddr fd070000 len 8193
+[ 4845.678728] rdma write completion
+[ 4845.678737] server rdma write complete 
+[ 4845.678739] server posted go ahead
+[ 4845.678745] send completion
+[ 4845.686055] recv completion
+[ 4845.686057] Received rkey 405da addr 11941bc000 len 8193 from peer
+[ 4845.686068] server received sink adv
+[ 4845.686071] krping: post_inv = 1, reg_mr new rkey 0x105b3 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.686073] server posted rdma read req 
+[ 4845.686081] rdma read completion
+[ 4845.686091] server received read complete
+[ 4845.686118] compression complete
+[ 4845.686120] krping: post_inv = 0, reg_mr new rkey 0x105b4 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.686124] rdma write from lkey 105b4 laddr fd070000 len 8193
+[ 4845.686132] rdma write completion
+[ 4845.686141] server rdma write complete 
+[ 4845.686143] server posted go ahead
+[ 4845.686148] send completion
+[ 4845.694068] recv completion
+[ 4845.694071] Received rkey 405db addr 11941bc000 len 8193 from peer
+[ 4845.694082] server received sink adv
+[ 4845.694085] krping: post_inv = 1, reg_mr new rkey 0x105b5 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.694088] server posted rdma read req 
+[ 4845.694094] rdma read completion
+[ 4845.694104] server received read complete
+[ 4845.694113] compression complete
+[ 4845.694115] krping: post_inv = 0, reg_mr new rkey 0x105b6 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.694117] rdma write from lkey 105b6 laddr fd070000 len 8193
+[ 4845.694126] rdma write completion
+[ 4845.694134] server rdma write complete 
+[ 4845.694137] server posted go ahead
+[ 4845.694143] send completion
+[ 4845.701877] recv completion
+[ 4845.701880] Received rkey 405dc addr 11941bc000 len 8193 from peer
+[ 4845.701891] server received sink adv
+[ 4845.701894] krping: post_inv = 1, reg_mr new rkey 0x105b7 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.701897] server posted rdma read req 
+[ 4845.701904] rdma read completion
+[ 4845.701914] server received read complete
+[ 4845.701923] compression complete
+[ 4845.701926] krping: post_inv = 0, reg_mr new rkey 0x105b8 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.701928] rdma write from lkey 105b8 laddr fd070000 len 8193
+[ 4845.701935] rdma write completion
+[ 4845.701944] server rdma write complete 
+[ 4845.701946] server posted go ahead
+[ 4845.701951] send completion
+[ 4845.708519] recv completion
+[ 4845.708521] Received rkey 405dd addr 11941bc000 len 8193 from peer
+[ 4845.708532] server received sink adv
+[ 4845.708535] krping: post_inv = 1, reg_mr new rkey 0x105b9 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.708538] server posted rdma read req 
+[ 4845.708545] rdma read completion
+[ 4845.708555] server received read complete
+[ 4845.708582] compression complete
+[ 4845.708585] krping: post_inv = 0, reg_mr new rkey 0x105ba pgsz 4096 len 8193 iova_start fd070000
+[ 4845.708587] rdma write from lkey 105ba laddr fd070000 len 8193
+[ 4845.708596] rdma write completion
+[ 4845.708605] server rdma write complete 
+[ 4845.708607] server posted go ahead
+[ 4845.708613] send completion
+[ 4845.716197] recv completion
+[ 4845.716199] Received rkey 405de addr 11941bc000 len 8193 from peer
+[ 4845.716210] server received sink adv
+[ 4845.716213] krping: post_inv = 1, reg_mr new rkey 0x105bb pgsz 4096 len 8193 iova_start fd070000
+[ 4845.716216] server posted rdma read req 
+[ 4845.716222] rdma read completion
+[ 4845.716231] server received read complete
+[ 4845.716258] compression complete
+[ 4845.716260] krping: post_inv = 0, reg_mr new rkey 0x105bc pgsz 4096 len 8193 iova_start fd070000
+[ 4845.716263] rdma write from lkey 105bc laddr fd070000 len 8193
+[ 4845.716272] rdma write completion
+[ 4845.716281] server rdma write complete 
+[ 4845.716283] server posted go ahead
+[ 4845.716289] send completion
+[ 4845.722778] recv completion
+[ 4845.722780] Received rkey 405df addr 11941bc000 len 8193 from peer
+[ 4845.722791] server received sink adv
+[ 4845.722793] krping: post_inv = 1, reg_mr new rkey 0x105bd pgsz 4096 len 8193 iova_start fd070000
+[ 4845.722796] server posted rdma read req 
+[ 4845.722804] rdma read completion
+[ 4845.722814] server received read complete
+[ 4845.722840] compression complete
+[ 4845.722842] krping: post_inv = 0, reg_mr new rkey 0x105be pgsz 4096 len 8193 iova_start fd070000
+[ 4845.722844] rdma write from lkey 105be laddr fd070000 len 8193
+[ 4845.722854] rdma write completion
+[ 4845.722862] server rdma write complete 
+[ 4845.722864] server posted go ahead
+[ 4845.722870] send completion
+[ 4845.730479] recv completion
+[ 4845.730482] Received rkey 405e0 addr 11941bc000 len 8193 from peer
+[ 4845.730492] server received sink adv
+[ 4845.730496] krping: post_inv = 1, reg_mr new rkey 0x105bf pgsz 4096 len 8193 iova_start fd070000
+[ 4845.730499] server posted rdma read req 
+[ 4845.730506] rdma read completion
+[ 4845.730516] server received read complete
+[ 4845.730539] compression complete
+[ 4845.730541] krping: post_inv = 0, reg_mr new rkey 0x105c0 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.730543] rdma write from lkey 105c0 laddr fd070000 len 8193
+[ 4845.730551] rdma write completion
+[ 4845.730560] server rdma write complete 
+[ 4845.730562] server posted go ahead
+[ 4845.730568] send completion
+[ 4845.735758] recv completion
+[ 4845.735761] Received rkey 405e1 addr 11941bc000 len 8193 from peer
+[ 4845.735770] server received sink adv
+[ 4845.735773] krping: post_inv = 1, reg_mr new rkey 0x105c1 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.735776] server posted rdma read req 
+[ 4845.735784] rdma read completion
+[ 4845.735794] server received read complete
+[ 4845.735820] compression complete
+[ 4845.735821] krping: post_inv = 0, reg_mr new rkey 0x105c2 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.735824] rdma write from lkey 105c2 laddr fd070000 len 8193
+[ 4845.735832] rdma write completion
+[ 4845.735841] server rdma write complete 
+[ 4845.735843] server posted go ahead
+[ 4845.735848] send completion
+[ 4845.741303] recv completion
+[ 4845.741305] Received rkey 405e2 addr 11941bc000 len 8193 from peer
+[ 4845.741315] server received sink adv
+[ 4845.741318] krping: post_inv = 1, reg_mr new rkey 0x105c3 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.741321] server posted rdma read req 
+[ 4845.741330] rdma read completion
+[ 4845.741339] server received read complete
+[ 4845.741365] compression complete
+[ 4845.741369] krping: post_inv = 0, reg_mr new rkey 0x105c4 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.741371] rdma write from lkey 105c4 laddr fd070000 len 8193
+[ 4845.741379] rdma write completion
+[ 4845.741388] server rdma write complete 
+[ 4845.741389] server posted go ahead
+[ 4845.741395] send completion
+[ 4845.747973] recv completion
+[ 4845.747975] Received rkey 405e3 addr 11941bc000 len 8193 from peer
+[ 4845.747986] server received sink adv
+[ 4845.747989] krping: post_inv = 1, reg_mr new rkey 0x105c5 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.747992] server posted rdma read req 
+[ 4845.747998] rdma read completion
+[ 4845.748009] server received read complete
+[ 4845.748026] compression complete
+[ 4845.748028] krping: post_inv = 0, reg_mr new rkey 0x105c6 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.748031] rdma write from lkey 105c6 laddr fd070000 len 8193
+[ 4845.748038] rdma write completion
+[ 4845.748047] server rdma write complete 
+[ 4845.748050] server posted go ahead
+[ 4845.748054] send completion
+[ 4845.755680] recv completion
+[ 4845.755682] Received rkey 405e4 addr 11941bc000 len 8193 from peer
+[ 4845.755693] server received sink adv
+[ 4845.755697] krping: post_inv = 1, reg_mr new rkey 0x105c7 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.755700] server posted rdma read req 
+[ 4845.755707] rdma read completion
+[ 4845.755717] server received read complete
+[ 4845.755737] compression complete
+[ 4845.755739] krping: post_inv = 0, reg_mr new rkey 0x105c8 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.755741] rdma write from lkey 105c8 laddr fd070000 len 8193
+[ 4845.755749] rdma write completion
+[ 4845.755758] server rdma write complete 
+[ 4845.755760] server posted go ahead
+[ 4845.755766] send completion
+[ 4845.762132] recv completion
+[ 4845.762134] Received rkey 405e5 addr 11941bc000 len 8193 from peer
+[ 4845.762146] server received sink adv
+[ 4845.762149] krping: post_inv = 1, reg_mr new rkey 0x105c9 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.762151] server posted rdma read req 
+[ 4845.762158] rdma read completion
+[ 4845.762169] server received read complete
+[ 4845.762196] compression complete
+[ 4845.762198] krping: post_inv = 0, reg_mr new rkey 0x105ca pgsz 4096 len 8193 iova_start fd070000
+[ 4845.762200] rdma write from lkey 105ca laddr fd070000 len 8193
+[ 4845.762208] rdma write completion
+[ 4845.762217] server rdma write complete 
+[ 4845.762219] server posted go ahead
+[ 4845.762224] send completion
+[ 4845.769973] recv completion
+[ 4845.769975] Received rkey 405e6 addr 11941bc000 len 8193 from peer
+[ 4845.769986] server received sink adv
+[ 4845.769990] krping: post_inv = 1, reg_mr new rkey 0x105cb pgsz 4096 len 8193 iova_start fd070000
+[ 4845.769992] server posted rdma read req 
+[ 4845.769999] rdma read completion
+[ 4845.770016] server received read complete
+[ 4845.770044] compression complete
+[ 4845.770047] krping: post_inv = 0, reg_mr new rkey 0x105cc pgsz 4096 len 8193 iova_start fd070000
+[ 4845.770051] rdma write from lkey 105cc laddr fd070000 len 8193
+[ 4845.770058] rdma write completion
+[ 4845.770067] server rdma write complete 
+[ 4845.770070] server posted go ahead
+[ 4845.770075] send completion
+[ 4845.775568] recv completion
+[ 4845.775570] Received rkey 405e7 addr 11941bc000 len 8193 from peer
+[ 4845.775581] server received sink adv
+[ 4845.775584] krping: post_inv = 1, reg_mr new rkey 0x105cd pgsz 4096 len 8193 iova_start fd070000
+[ 4845.775587] server posted rdma read req 
+[ 4845.775594] rdma read completion
+[ 4845.775605] server received read complete
+[ 4845.775615] compression complete
+[ 4845.775617] krping: post_inv = 0, reg_mr new rkey 0x105ce pgsz 4096 len 8193 iova_start fd070000
+[ 4845.775619] rdma write from lkey 105ce laddr fd070000 len 8193
+[ 4845.775628] rdma write completion
+[ 4845.775637] server rdma write complete 
+[ 4845.775638] server posted go ahead
+[ 4845.775644] send completion
+[ 4845.780819] recv completion
+[ 4845.780821] Received rkey 405e8 addr 11941bc000 len 8193 from peer
+[ 4845.780831] server received sink adv
+[ 4845.780834] krping: post_inv = 1, reg_mr new rkey 0x105cf pgsz 4096 len 8193 iova_start fd070000
+[ 4845.780837] server posted rdma read req 
+[ 4845.780844] rdma read completion
+[ 4845.780854] server received read complete
+[ 4845.780863] compression complete
+[ 4845.780865] krping: post_inv = 0, reg_mr new rkey 0x105d0 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.780867] rdma write from lkey 105d0 laddr fd070000 len 8193
+[ 4845.780875] rdma write completion
+[ 4845.780884] server rdma write complete 
+[ 4845.780886] server posted go ahead
+[ 4845.780891] send completion
+[ 4845.787215] recv completion
+[ 4845.787217] Received rkey 405e9 addr 11941bc000 len 8193 from peer
+[ 4845.787228] server received sink adv
+[ 4845.787231] krping: post_inv = 1, reg_mr new rkey 0x105d1 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.787234] server posted rdma read req 
+[ 4845.787241] rdma read completion
+[ 4845.787251] server received read complete
+[ 4845.787270] compression complete
+[ 4845.787272] krping: post_inv = 0, reg_mr new rkey 0x105d2 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.787275] rdma write from lkey 105d2 laddr fd070000 len 8193
+[ 4845.787284] rdma write completion
+[ 4845.787292] server rdma write complete 
+[ 4845.787294] server posted go ahead
+[ 4845.787300] send completion
+[ 4845.795082] recv completion
+[ 4845.795085] Received rkey 405ea addr 11941bc000 len 8193 from peer
+[ 4845.795096] server received sink adv
+[ 4845.795099] krping: post_inv = 1, reg_mr new rkey 0x105d3 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.795102] server posted rdma read req 
+[ 4845.795109] rdma read completion
+[ 4845.795119] server received read complete
+[ 4845.795128] compression complete
+[ 4845.795130] krping: post_inv = 0, reg_mr new rkey 0x105d4 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.795133] rdma write from lkey 105d4 laddr fd070000 len 8193
+[ 4845.795141] rdma write completion
+[ 4845.795149] server rdma write complete 
+[ 4845.795151] server posted go ahead
+[ 4845.795157] send completion
+[ 4845.804347] recv completion
+[ 4845.804350] Received rkey 405eb addr 11941bc000 len 8193 from peer
+[ 4845.804360] server received sink adv
+[ 4845.804364] krping: post_inv = 1, reg_mr new rkey 0x105d5 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.804368] server posted rdma read req 
+[ 4845.804375] rdma read completion
+[ 4845.804387] server received read complete
+[ 4845.804407] compression complete
+[ 4845.804409] krping: post_inv = 0, reg_mr new rkey 0x105d6 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.804411] rdma write from lkey 105d6 laddr fd070000 len 8193
+[ 4845.804421] rdma write completion
+[ 4845.804430] server rdma write complete 
+[ 4845.804432] server posted go ahead
+[ 4845.804438] send completion
+[ 4845.812200] recv completion
+[ 4845.812202] Received rkey 405ec addr 11941bc000 len 8193 from peer
+[ 4845.812213] server received sink adv
+[ 4845.812216] krping: post_inv = 1, reg_mr new rkey 0x105d7 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.812219] server posted rdma read req 
+[ 4845.812226] rdma read completion
+[ 4845.812236] server received read complete
+[ 4845.812254] compression complete
+[ 4845.812256] krping: post_inv = 0, reg_mr new rkey 0x105d8 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.812259] rdma write from lkey 105d8 laddr fd070000 len 8193
+[ 4845.812266] rdma write completion
+[ 4845.812275] server rdma write complete 
+[ 4845.812278] server posted go ahead
+[ 4845.812282] send completion
+[ 4845.817113] recv completion
+[ 4845.817115] Received rkey 405ed addr 11941bc000 len 8193 from peer
+[ 4845.817125] server received sink adv
+[ 4845.817129] krping: post_inv = 1, reg_mr new rkey 0x105d9 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.817133] server posted rdma read req 
+[ 4845.817141] rdma read completion
+[ 4845.817152] server received read complete
+[ 4845.817163] compression complete
+[ 4845.817165] krping: post_inv = 0, reg_mr new rkey 0x105da pgsz 4096 len 8193 iova_start fd070000
+[ 4845.817167] rdma write from lkey 105da laddr fd070000 len 8193
+[ 4845.817175] rdma write completion
+[ 4845.817183] server rdma write complete 
+[ 4845.817186] server posted go ahead
+[ 4845.817191] send completion
+[ 4845.823655] recv completion
+[ 4845.823658] Received rkey 405ee addr 11941bc000 len 8193 from peer
+[ 4845.823669] server received sink adv
+[ 4845.823672] krping: post_inv = 1, reg_mr new rkey 0x105db pgsz 4096 len 8193 iova_start fd070000
+[ 4845.823674] server posted rdma read req 
+[ 4845.823682] rdma read completion
+[ 4845.823691] server received read complete
+[ 4845.823699] compression complete
+[ 4845.823701] krping: post_inv = 0, reg_mr new rkey 0x105dc pgsz 4096 len 8193 iova_start fd070000
+[ 4845.823704] rdma write from lkey 105dc laddr fd070000 len 8193
+[ 4845.823711] rdma write completion
+[ 4845.823720] server rdma write complete 
+[ 4845.823722] server posted go ahead
+[ 4845.823728] send completion
+[ 4845.832095] recv completion
+[ 4845.832097] Received rkey 405ef addr 11941bc000 len 8193 from peer
+[ 4845.832108] server received sink adv
+[ 4845.832111] krping: post_inv = 1, reg_mr new rkey 0x105dd pgsz 4096 len 8193 iova_start fd070000
+[ 4845.832113] server posted rdma read req 
+[ 4845.832121] rdma read completion
+[ 4845.832133] server received read complete
+[ 4845.832141] compression complete
+[ 4845.832143] krping: post_inv = 0, reg_mr new rkey 0x105de pgsz 4096 len 8193 iova_start fd070000
+[ 4845.832145] rdma write from lkey 105de laddr fd070000 len 8193
+[ 4845.832155] rdma write completion
+[ 4845.832163] server rdma write complete 
+[ 4845.832167] server posted go ahead
+[ 4845.832172] send completion
+[ 4845.839641] recv completion
+[ 4845.839643] Received rkey 405f0 addr 11941bc000 len 8193 from peer
+[ 4845.839654] server received sink adv
+[ 4845.839657] krping: post_inv = 1, reg_mr new rkey 0x105df pgsz 4096 len 8193 iova_start fd070000
+[ 4845.839660] server posted rdma read req 
+[ 4845.839666] rdma read completion
+[ 4845.839679] server received read complete
+[ 4845.839698] compression complete
+[ 4845.839700] krping: post_inv = 0, reg_mr new rkey 0x105e0 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.839702] rdma write from lkey 105e0 laddr fd070000 len 8193
+[ 4845.839711] rdma write completion
+[ 4845.839720] server rdma write complete 
+[ 4845.839722] server posted go ahead
+[ 4845.839727] send completion
+[ 4845.845038] recv completion
+[ 4845.845041] Received rkey 405f1 addr 11941bc000 len 8193 from peer
+[ 4845.845052] server received sink adv
+[ 4845.845055] krping: post_inv = 1, reg_mr new rkey 0x105e1 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.845058] server posted rdma read req 
+[ 4845.845065] rdma read completion
+[ 4845.845075] server received read complete
+[ 4845.845087] compression complete
+[ 4845.845089] krping: post_inv = 0, reg_mr new rkey 0x105e2 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.845091] rdma write from lkey 105e2 laddr fd070000 len 8193
+[ 4845.845098] rdma write completion
+[ 4845.845107] server rdma write complete 
+[ 4845.845110] server posted go ahead
+[ 4845.845116] send completion
+[ 4845.850844] recv completion
+[ 4845.850846] Received rkey 405f2 addr 11941bc000 len 8193 from peer
+[ 4845.850857] server received sink adv
+[ 4845.850860] krping: post_inv = 1, reg_mr new rkey 0x105e3 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.850863] server posted rdma read req 
+[ 4845.850870] rdma read completion
+[ 4845.850880] server received read complete
+[ 4845.850889] compression complete
+[ 4845.850891] krping: post_inv = 0, reg_mr new rkey 0x105e4 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.850893] rdma write from lkey 105e4 laddr fd070000 len 8193
+[ 4845.850901] rdma write completion
+[ 4845.850910] server rdma write complete 
+[ 4845.850912] server posted go ahead
+[ 4845.850917] send completion
+[ 4845.858550] recv completion
+[ 4845.858553] Received rkey 405f3 addr 11941bc000 len 8193 from peer
+[ 4845.858564] server received sink adv
+[ 4845.858567] krping: post_inv = 1, reg_mr new rkey 0x105e5 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.858570] server posted rdma read req 
+[ 4845.858577] rdma read completion
+[ 4845.858588] server received read complete
+[ 4845.858606] compression complete
+[ 4845.858608] krping: post_inv = 0, reg_mr new rkey 0x105e6 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.858610] rdma write from lkey 105e6 laddr fd070000 len 8193
+[ 4845.858619] rdma write completion
+[ 4845.858628] server rdma write complete 
+[ 4845.858630] server posted go ahead
+[ 4845.858636] send completion
+[ 4845.867617] recv completion
+[ 4845.867619] Received rkey 405f4 addr 11941bc000 len 8193 from peer
+[ 4845.867630] server received sink adv
+[ 4845.867633] krping: post_inv = 1, reg_mr new rkey 0x105e7 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.867635] server posted rdma read req 
+[ 4845.867642] rdma read completion
+[ 4845.867652] server received read complete
+[ 4845.867671] compression complete
+[ 4845.867673] krping: post_inv = 0, reg_mr new rkey 0x105e8 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.867675] rdma write from lkey 105e8 laddr fd070000 len 8193
+[ 4845.867683] rdma write completion
+[ 4845.867692] server rdma write complete 
+[ 4845.867694] server posted go ahead
+[ 4845.867699] send completion
+[ 4845.876591] recv completion
+[ 4845.876593] Received rkey 405f5 addr 11941bc000 len 8193 from peer
+[ 4845.876605] server received sink adv
+[ 4845.876608] krping: post_inv = 1, reg_mr new rkey 0x105e9 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.876610] server posted rdma read req 
+[ 4845.876617] rdma read completion
+[ 4845.876629] server received read complete
+[ 4845.876639] compression complete
+[ 4845.876641] krping: post_inv = 0, reg_mr new rkey 0x105ea pgsz 4096 len 8193 iova_start fd070000
+[ 4845.876643] rdma write from lkey 105ea laddr fd070000 len 8193
+[ 4845.876650] rdma write completion
+[ 4845.876659] server rdma write complete 
+[ 4845.876662] server posted go ahead
+[ 4845.876668] send completion
+[ 4845.884043] recv completion
+[ 4845.884046] Received rkey 405f6 addr 11941bc000 len 8193 from peer
+[ 4845.884057] server received sink adv
+[ 4845.884060] krping: post_inv = 1, reg_mr new rkey 0x105eb pgsz 4096 len 8193 iova_start fd070000
+[ 4845.884063] server posted rdma read req 
+[ 4845.884071] rdma read completion
+[ 4845.884081] server received read complete
+[ 4845.884090] compression complete
+[ 4845.884092] krping: post_inv = 0, reg_mr new rkey 0x105ec pgsz 4096 len 8193 iova_start fd070000
+[ 4845.884094] rdma write from lkey 105ec laddr fd070000 len 8193
+[ 4845.884102] rdma write completion
+[ 4845.884111] server rdma write complete 
+[ 4845.884113] server posted go ahead
+[ 4845.884119] send completion
+[ 4845.891992] recv completion
+[ 4845.891994] Received rkey 405f7 addr 11941bc000 len 8193 from peer
+[ 4845.892006] server received sink adv
+[ 4845.892008] krping: post_inv = 1, reg_mr new rkey 0x105ed pgsz 4096 len 8193 iova_start fd070000
+[ 4845.892011] server posted rdma read req 
+[ 4845.892019] rdma read completion
+[ 4845.892029] server received read complete
+[ 4845.892046] compression complete
+[ 4845.892048] krping: post_inv = 0, reg_mr new rkey 0x105ee pgsz 4096 len 8193 iova_start fd070000
+[ 4845.892050] rdma write from lkey 105ee laddr fd070000 len 8193
+[ 4845.892058] rdma write completion
+[ 4845.892067] server rdma write complete 
+[ 4845.892068] server posted go ahead
+[ 4845.892074] send completion
+[ 4845.898726] recv completion
+[ 4845.898729] Received rkey 405f8 addr 11941bc000 len 8193 from peer
+[ 4845.898740] server received sink adv
+[ 4845.898743] krping: post_inv = 1, reg_mr new rkey 0x105ef pgsz 4096 len 8193 iova_start fd070000
+[ 4845.898746] server posted rdma read req 
+[ 4845.898752] rdma read completion
+[ 4845.898762] server received read complete
+[ 4845.898777] compression complete
+[ 4845.898779] krping: post_inv = 0, reg_mr new rkey 0x105f0 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.898781] rdma write from lkey 105f0 laddr fd070000 len 8193
+[ 4845.898788] rdma write completion
+[ 4845.898798] server rdma write complete 
+[ 4845.898800] server posted go ahead
+[ 4845.898806] send completion
+[ 4845.905025] recv completion
+[ 4845.905028] Received rkey 405f9 addr 11941bc000 len 8193 from peer
+[ 4845.905039] server received sink adv
+[ 4845.905042] krping: post_inv = 1, reg_mr new rkey 0x105f1 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.905045] server posted rdma read req 
+[ 4845.905053] rdma read completion
+[ 4845.905064] server received read complete
+[ 4845.905073] compression complete
+[ 4845.905075] krping: post_inv = 0, reg_mr new rkey 0x105f2 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.905077] rdma write from lkey 105f2 laddr fd070000 len 8193
+[ 4845.905086] rdma write completion
+[ 4845.905095] server rdma write complete 
+[ 4845.905096] server posted go ahead
+[ 4845.905102] send completion
+[ 4845.911986] recv completion
+[ 4845.911988] Received rkey 405fa addr 11941bc000 len 8193 from peer
+[ 4845.912000] server received sink adv
+[ 4845.912003] krping: post_inv = 1, reg_mr new rkey 0x105f3 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.912005] server posted rdma read req 
+[ 4845.912012] rdma read completion
+[ 4845.912021] server received read complete
+[ 4845.912042] compression complete
+[ 4845.912044] krping: post_inv = 0, reg_mr new rkey 0x105f4 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.912046] rdma write from lkey 105f4 laddr fd070000 len 8193
+[ 4845.912056] rdma write completion
+[ 4845.912065] server rdma write complete 
+[ 4845.912067] server posted go ahead
+[ 4845.912072] send completion
+[ 4845.919887] recv completion
+[ 4845.919891] Received rkey 405fb addr 11941bc000 len 8193 from peer
+[ 4845.919911] server received sink adv
+[ 4845.919920] krping: post_inv = 1, reg_mr new rkey 0x105f5 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.919926] server posted rdma read req 
+[ 4845.919933] rdma read completion
+[ 4845.919945] server received read complete
+[ 4845.919971] compression complete
+[ 4845.919976] krping: post_inv = 0, reg_mr new rkey 0x105f6 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.919980] rdma write from lkey 105f6 laddr fd070000 len 8193
+[ 4845.919989] rdma write completion
+[ 4845.919998] server rdma write complete 
+[ 4845.920000] server posted go ahead
+[ 4845.920007] send completion
+[ 4845.928788] recv completion
+[ 4845.928794] Received rkey 405fc addr 11941bc000 len 8193 from peer
+[ 4845.928823] server received sink adv
+[ 4845.928829] krping: post_inv = 1, reg_mr new rkey 0x105f7 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.928835] server posted rdma read req 
+[ 4845.928842] rdma read completion
+[ 4845.928852] server received read complete
+[ 4845.928877] compression complete
+[ 4845.928880] krping: post_inv = 0, reg_mr new rkey 0x105f8 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.928882] rdma write from lkey 105f8 laddr fd070000 len 8193
+[ 4845.928890] rdma write completion
+[ 4845.928899] server rdma write complete 
+[ 4845.928901] server posted go ahead
+[ 4845.928906] send completion
+[ 4845.937467] recv completion
+[ 4845.937472] Received rkey 405fd addr 11941bc000 len 8193 from peer
+[ 4845.937496] server received sink adv
+[ 4845.937504] krping: post_inv = 1, reg_mr new rkey 0x105f9 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.937512] server posted rdma read req 
+[ 4845.937520] rdma read completion
+[ 4845.937530] server received read complete
+[ 4845.937559] compression complete
+[ 4845.937561] krping: post_inv = 0, reg_mr new rkey 0x105fa pgsz 4096 len 8193 iova_start fd070000
+[ 4845.937564] rdma write from lkey 105fa laddr fd070000 len 8193
+[ 4845.937572] rdma write completion
+[ 4845.937581] server rdma write complete 
+[ 4845.937584] server posted go ahead
+[ 4845.937590] send completion
+[ 4845.944216] recv completion
+[ 4845.944221] Received rkey 405fe addr 11941bc000 len 8193 from peer
+[ 4845.944241] server received sink adv
+[ 4845.944247] krping: post_inv = 1, reg_mr new rkey 0x105fb pgsz 4096 len 8193 iova_start fd070000
+[ 4845.944253] server posted rdma read req 
+[ 4845.944261] rdma read completion
+[ 4845.944271] server received read complete
+[ 4845.944303] compression complete
+[ 4845.944305] krping: post_inv = 0, reg_mr new rkey 0x105fc pgsz 4096 len 8193 iova_start fd070000
+[ 4845.944308] rdma write from lkey 105fc laddr fd070000 len 8193
+[ 4845.944316] rdma write completion
+[ 4845.944326] server rdma write complete 
+[ 4845.944328] server posted go ahead
+[ 4845.944334] send completion
+[ 4845.948516] recv completion
+[ 4845.948521] Received rkey 405ff addr 11941bc000 len 8193 from peer
+[ 4845.948536] server received sink adv
+[ 4845.948541] krping: post_inv = 1, reg_mr new rkey 0x105fd pgsz 4096 len 8193 iova_start fd070000
+[ 4845.948545] server posted rdma read req 
+[ 4845.948553] rdma read completion
+[ 4845.948561] server received read complete
+[ 4845.948591] compression complete
+[ 4845.948593] krping: post_inv = 0, reg_mr new rkey 0x105fe pgsz 4096 len 8193 iova_start fd070000
+[ 4845.948595] rdma write from lkey 105fe laddr fd070000 len 8193
+[ 4845.948603] rdma write completion
+[ 4845.948612] server rdma write complete 
+[ 4845.948614] server posted go ahead
+[ 4845.948620] send completion
+[ 4845.954117] recv completion
+[ 4845.954123] Received rkey 40500 addr 11941bc000 len 8193 from peer
+[ 4845.954148] server received sink adv
+[ 4845.954153] krping: post_inv = 1, reg_mr new rkey 0x105ff pgsz 4096 len 8193 iova_start fd070000
+[ 4845.954160] server posted rdma read req 
+[ 4845.954167] rdma read completion
+[ 4845.954173] server received read complete
+[ 4845.954199] compression complete
+[ 4845.954202] krping: post_inv = 0, reg_mr new rkey 0x10500 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.954205] rdma write from lkey 10500 laddr fd070000 len 8193
+[ 4845.954213] rdma write completion
+[ 4845.954219] server rdma write complete 
+[ 4845.954221] server posted go ahead
+[ 4845.954226] send completion
+[ 4845.962984] recv completion
+[ 4845.962990] Received rkey 40501 addr 11941bc000 len 8193 from peer
+[ 4845.963014] server received sink adv
+[ 4845.963019] krping: post_inv = 1, reg_mr new rkey 0x10501 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.963024] server posted rdma read req 
+[ 4845.963031] rdma read completion
+[ 4845.963037] server received read complete
+[ 4845.963066] compression complete
+[ 4845.963069] krping: post_inv = 0, reg_mr new rkey 0x10502 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.963072] rdma write from lkey 10502 laddr fd070000 len 8193
+[ 4845.963079] rdma write completion
+[ 4845.963085] server rdma write complete 
+[ 4845.963087] server posted go ahead
+[ 4845.963094] send completion
+[ 4845.970517] recv completion
+[ 4845.970523] Received rkey 40502 addr 11941bc000 len 8193 from peer
+[ 4845.970552] server received sink adv
+[ 4845.970560] krping: post_inv = 1, reg_mr new rkey 0x10503 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.970569] server posted rdma read req 
+[ 4845.970576] rdma read completion
+[ 4845.970587] server received read complete
+[ 4845.970616] compression complete
+[ 4845.970618] krping: post_inv = 0, reg_mr new rkey 0x10504 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.970621] rdma write from lkey 10504 laddr fd070000 len 8193
+[ 4845.970629] rdma write completion
+[ 4845.970639] server rdma write complete 
+[ 4845.970641] server posted go ahead
+[ 4845.970648] send completion
+[ 4845.974782] recv completion
+[ 4845.974786] Received rkey 40503 addr 11941bc000 len 8193 from peer
+[ 4845.974801] server received sink adv
+[ 4845.974808] krping: post_inv = 1, reg_mr new rkey 0x10505 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.974813] server posted rdma read req 
+[ 4845.974820] rdma read completion
+[ 4845.974829] server received read complete
+[ 4845.974853] compression complete
+[ 4845.974855] krping: post_inv = 0, reg_mr new rkey 0x10506 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.974858] rdma write from lkey 10506 laddr fd070000 len 8193
+[ 4845.974866] rdma write completion
+[ 4845.974875] server rdma write complete 
+[ 4845.974877] server posted go ahead
+[ 4845.974882] send completion
+[ 4845.980713] recv completion
+[ 4845.980718] Received rkey 40504 addr 11941bc000 len 8193 from peer
+[ 4845.980738] server received sink adv
+[ 4845.980744] krping: post_inv = 1, reg_mr new rkey 0x10507 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.980752] server posted rdma read req 
+[ 4845.980759] rdma read completion
+[ 4845.980768] server received read complete
+[ 4845.980790] compression complete
+[ 4845.980792] krping: post_inv = 0, reg_mr new rkey 0x10508 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.980795] rdma write from lkey 10508 laddr fd070000 len 8193
+[ 4845.980802] rdma write completion
+[ 4845.980811] server rdma write complete 
+[ 4845.980813] server posted go ahead
+[ 4845.980819] send completion
+[ 4845.987559] recv completion
+[ 4845.987564] Received rkey 40505 addr 11941bc000 len 8193 from peer
+[ 4845.987582] server received sink adv
+[ 4845.987587] krping: post_inv = 1, reg_mr new rkey 0x10509 pgsz 4096 len 8193 iova_start fd070000
+[ 4845.987593] server posted rdma read req 
+[ 4845.987600] rdma read completion
+[ 4845.987609] server received read complete
+[ 4845.987643] compression complete
+[ 4845.987645] krping: post_inv = 0, reg_mr new rkey 0x1050a pgsz 4096 len 8193 iova_start fd070000
+[ 4845.987648] rdma write from lkey 1050a laddr fd070000 len 8193
+[ 4845.987656] rdma write completion
+[ 4845.987664] server rdma write complete 
+[ 4845.987667] server posted go ahead
+[ 4845.987673] send completion
+[ 4845.994984] recv completion
+[ 4845.994989] Received rkey 40506 addr 11941bc000 len 8193 from peer
+[ 4845.995018] server received sink adv
+[ 4845.995026] krping: post_inv = 1, reg_mr new rkey 0x1050b pgsz 4096 len 8193 iova_start fd070000
+[ 4845.995034] server posted rdma read req 
+[ 4845.995041] rdma read completion
+[ 4845.995051] server received read complete
+[ 4845.995080] compression complete
+[ 4845.995082] krping: post_inv = 0, reg_mr new rkey 0x1050c pgsz 4096 len 8193 iova_start fd070000
+[ 4845.995086] rdma write from lkey 1050c laddr fd070000 len 8193
+[ 4845.995093] rdma write completion
+[ 4845.995102] server rdma write complete 
+[ 4845.995104] server posted go ahead
+[ 4845.995110] send completion
+[ 4846.000586] recv completion
+[ 4846.000590] Received rkey 40507 addr 11941bc000 len 8193 from peer
+[ 4846.000609] server received sink adv
+[ 4846.000617] krping: post_inv = 1, reg_mr new rkey 0x1050d pgsz 4096 len 8193 iova_start fd070000
+[ 4846.000625] server posted rdma read req 
+[ 4846.000632] rdma read completion
+[ 4846.000642] server received read complete
+[ 4846.000678] compression complete
+[ 4846.000681] krping: post_inv = 0, reg_mr new rkey 0x1050e pgsz 4096 len 8193 iova_start fd070000
+[ 4846.000683] rdma write from lkey 1050e laddr fd070000 len 8193
+[ 4846.000691] rdma write completion
+[ 4846.000700] server rdma write complete 
+[ 4846.000702] server posted go ahead
+[ 4846.000708] send completion
+[ 4846.008586] recv completion
+[ 4846.008589] Received rkey 40508 addr 11941bc000 len 8193 from peer
+[ 4846.008606] server received sink adv
+[ 4846.008613] krping: post_inv = 1, reg_mr new rkey 0x1050f pgsz 4096 len 8193 iova_start fd070000
+[ 4846.008623] server posted rdma read req 
+[ 4846.008631] rdma read completion
+[ 4846.008639] server received read complete
+[ 4846.008672] compression complete
+[ 4846.008674] krping: post_inv = 0, reg_mr new rkey 0x10510 pgsz 4096 len 8193 iova_start fd070000
+[ 4846.008677] rdma write from lkey 10510 laddr fd070000 len 8193
+[ 4846.008684] rdma write completion
+[ 4846.008693] server rdma write complete 
+[ 4846.008700] server posted go ahead
+[ 4846.008705] send completion
+[ 4846.016799] recv completion
+[ 4846.016802] Received rkey 40509 addr 11941bc000 len 8193 from peer
+[ 4846.016818] server received sink adv
+[ 4846.016823] krping: post_inv = 1, reg_mr new rkey 0x10511 pgsz 4096 len 8193 iova_start fd070000
+[ 4846.016828] server posted rdma read req 
+[ 4846.016834] rdma read completion
+[ 4846.016843] server received read complete
+[ 4846.016863] compression complete
+[ 4846.016866] krping: post_inv = 0, reg_mr new rkey 0x10512 pgsz 4096 len 8193 iova_start fd070000
+[ 4846.016868] rdma write from lkey 10512 laddr fd070000 len 8193
+[ 4846.016876] rdma write completion
+[ 4846.016884] server rdma write complete 
+[ 4846.016886] server posted go ahead
+[ 4846.016892] send completion
+[ 4846.023799] recv completion
+[ 4846.023803] Received rkey 4050a addr 11941bc000 len 8193 from peer
+[ 4846.023821] server received sink adv
+[ 4846.023828] krping: post_inv = 1, reg_mr new rkey 0x10513 pgsz 4096 len 8193 iova_start fd070000
+[ 4846.023833] server posted rdma read req 
+[ 4846.023841] rdma read completion
+[ 4846.023850] server received read complete
+[ 4846.023879] compression complete
+[ 4846.023882] krping: post_inv = 0, reg_mr new rkey 0x10514 pgsz 4096 len 8193 iova_start fd070000
+[ 4846.023885] rdma write from lkey 10514 laddr fd070000 len 8193
+[ 4846.023893] rdma write completion
+[ 4846.023901] server rdma write complete 
+[ 4846.023903] server posted go ahead
+[ 4846.023909] send completion
+[ 4846.030703] recv completion
+[ 4846.030710] Received rkey 4050b addr 11941bc000 len 8193 from peer
+[ 4846.030738] server received sink adv
+[ 4846.030747] krping: post_inv = 1, reg_mr new rkey 0x10515 pgsz 4096 len 8193 iova_start fd070000
+[ 4846.030755] server posted rdma read req 
+[ 4846.030761] rdma read completion
+[ 4846.030771] server received read complete
+[ 4846.030806] compression complete
+[ 4846.030808] krping: post_inv = 0, reg_mr new rkey 0x10516 pgsz 4096 len 8193 iova_start fd070000
+[ 4846.030811] rdma write from lkey 10516 laddr fd070000 len 8193
+[ 4846.030819] rdma write completion
+[ 4846.030828] server rdma write complete 
+[ 4846.030830] server posted go ahead
+[ 4846.030837] send completion
+[ 4846.038417] recv completion
+[ 4846.038422] Received rkey 4050c addr 11941bc000 len 8193 from peer
+[ 4846.038444] server received sink adv
+[ 4846.038452] krping: post_inv = 1, reg_mr new rkey 0x10517 pgsz 4096 len 8193 iova_start fd070000
+[ 4846.038458] server posted rdma read req 
+[ 4846.038466] rdma read completion
+[ 4846.038475] server received read complete
+[ 4846.038497] compression complete
+[ 4846.038499] krping: post_inv = 0, reg_mr new rkey 0x10518 pgsz 4096 len 8193 iova_start fd070000
+[ 4846.038502] rdma write from lkey 10518 laddr fd070000 len 8193
+[ 4846.038510] rdma write completion
+[ 4846.038518] server rdma write complete 
+[ 4846.038521] server posted go ahead
+[ 4846.038526] send completion
+[ 4846.046165] recv completion
+[ 4846.046168] Received rkey 4050d addr 11941bc000 len 8193 from peer
+[ 4846.046180] server received sink adv
+[ 4846.046185] krping: post_inv = 1, reg_mr new rkey 0x10519 pgsz 4096 len 8193 iova_start fd070000
+[ 4846.046188] server posted rdma read req 
+[ 4846.046195] rdma read completion
+[ 4846.046205] server received read complete
+[ 4846.046225] compression complete
+[ 4846.046227] krping: post_inv = 0, reg_mr new rkey 0x1051a pgsz 4096 len 8193 iova_start fd070000
+[ 4846.046233] rdma write from lkey 1051a laddr fd070000 len 8193
+[ 4846.046241] rdma write completion
+[ 4846.046249] server rdma write complete 
+[ 4846.046255] server posted go ahead
+[ 4846.046260] send completion
+[ 4846.051446] recv completion
+[ 4846.051448] Received rkey 4050e addr 11941bc000 len 8193 from peer
+[ 4846.051458] server received sink adv
+[ 4846.051460] krping: post_inv = 1, reg_mr new rkey 0x1051b pgsz 4096 len 8193 iova_start fd070000
+[ 4846.051463] server posted rdma read req 
+[ 4846.051470] rdma read completion
+[ 4846.051479] server received read complete
+[ 4846.051504] compression complete
+[ 4846.051507] krping: post_inv = 0, reg_mr new rkey 0x1051c pgsz 4096 len 8193 iova_start fd070000
+[ 4846.051509] rdma write from lkey 1051c laddr fd070000 len 8193
+[ 4846.051516] rdma write completion
+[ 4846.051525] server rdma write complete 
+[ 4846.051527] server posted go ahead
+[ 4846.051532] send completion
+[ 4846.056725] recv completion
+[ 4846.056727] Received rkey 4050f addr 11941bc000 len 8193 from peer
+[ 4846.056739] server received sink adv
+[ 4846.056742] krping: post_inv = 1, reg_mr new rkey 0x1051d pgsz 4096 len 8193 iova_start fd070000
+[ 4846.056745] server posted rdma read req 
+[ 4846.056752] rdma read completion
+[ 4846.056761] server received read complete
+[ 4846.056789] compression complete
+[ 4846.056791] krping: post_inv = 0, reg_mr new rkey 0x1051e pgsz 4096 len 8193 iova_start fd070000
+[ 4846.056794] rdma write from lkey 1051e laddr fd070000 len 8193
+[ 4846.056801] rdma write completion
+[ 4846.056810] server rdma write complete 
+[ 4846.056813] server posted go ahead
+[ 4846.056818] send completion
+[ 4846.063298] recv completion
+[ 4846.063302] Received rkey 40510 addr 11941bc000 len 8193 from peer
+[ 4846.063316] server received sink adv
+[ 4846.063321] krping: post_inv = 1, reg_mr new rkey 0x1051f pgsz 4096 len 8193 iova_start fd070000
+[ 4846.063327] server posted rdma read req 
+[ 4846.063334] rdma read completion
+[ 4846.063343] server received read complete
+[ 4846.063365] compression complete
+[ 4846.063368] krping: post_inv = 0, reg_mr new rkey 0x10520 pgsz 4096 len 8193 iova_start fd070000
+[ 4846.063370] rdma write from lkey 10520 laddr fd070000 len 8193
+[ 4846.063377] rdma write completion
+[ 4846.063386] server rdma write complete 
+[ 4846.063388] server posted go ahead
+[ 4846.063394] send completion
+[ 4846.072230] recv completion
+[ 4846.072237] Received rkey 40511 addr 11941bc000 len 8193 from peer
+[ 4846.072266] server received sink adv
+[ 4846.072271] krping: post_inv = 1, reg_mr new rkey 0x10521 pgsz 4096 len 8193 iova_start fd070000
+[ 4846.072280] server posted rdma read req 
+[ 4846.072287] rdma read completion
+[ 4846.072293] server received read complete
+[ 4846.072330] compression complete
+[ 4846.072332] krping: post_inv = 0, reg_mr new rkey 0x10522 pgsz 4096 len 8193 iova_start fd070000
+[ 4846.072335] rdma write from lkey 10522 laddr fd070000 len 8193
+[ 4846.072344] rdma write completion
+[ 4846.072350] server rdma write complete 
+[ 4846.072352] server posted go ahead
+[ 4846.072358] send completion
+[ 4846.080158] recv completion
+[ 4846.080164] Received rkey 40512 addr 11941bc000 len 8193 from peer
+[ 4846.080189] server received sink adv
+[ 4846.080194] krping: post_inv = 1, reg_mr new rkey 0x10523 pgsz 4096 len 8193 iova_start fd070000
+[ 4846.080201] server posted rdma read req 
+[ 4846.080208] rdma read completion
+[ 4846.080215] server received read complete
+[ 4846.080251] compression complete
+[ 4846.080254] krping: post_inv = 0, reg_mr new rkey 0x10524 pgsz 4096 len 8193 iova_start fd070000
+[ 4846.080257] rdma write from lkey 10524 laddr fd070000 len 8193
+[ 4846.080265] rdma write completion
+[ 4846.080271] server rdma write complete 
+[ 4846.080273] server posted go ahead
+[ 4846.080279] send completion
+[ 4846.085650] recv completion
+[ 4846.085656] Received rkey 40513 addr 11941bc000 len 8193 from peer
+[ 4846.085680] server received sink adv
+[ 4846.085685] krping: post_inv = 1, reg_mr new rkey 0x10525 pgsz 4096 len 8193 iova_start fd070000
+[ 4846.085691] server posted rdma read req 
+[ 4846.085698] rdma read completion
+[ 4846.085705] server received read complete
+[ 4846.085720] compression complete
+[ 4846.085723] krping: post_inv = 0, reg_mr new rkey 0x10526 pgsz 4096 len 8193 iova_start fd070000
+[ 4846.085725] rdma write from lkey 10526 laddr fd070000 len 8193
+[ 4846.085733] rdma write completion
+[ 4846.085740] server rdma write complete 
+[ 4846.085743] server posted go ahead
+[ 4846.085749] send completion
